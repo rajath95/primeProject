@@ -163,15 +163,16 @@
 			"file": "prime/settings.py",
 			"settings":
 			{
-				"buffer_size": 2666,
+				"buffer_size": 2759,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/rajath/add/addressbook/abook/templates/abook/detail.html",
+			"file": "primeExchange/models.py",
 			"settings":
 			{
-				"buffer_size": 713,
+				"buffer_size": 182,
 				"line_ending": "Unix"
 			}
 		},
@@ -244,14 +245,12 @@
 	},
 	"expanded_folders":
 	[
-		"/home/rajath/add/addressbook",
-		"/home/rajath/add/addressbook/abook",
-		"/home/rajath/add/addressbook/abook/templates",
-		"/home/rajath/add/addressbook/abook/templates/abook",
-		"/home/rajath/add/addressbook/addressbook"
+		"/home/rajath/prime/src",
+		"/home/rajath/prime/src/primeExchange"
 	],
 	"file_history":
 	[
+		"/home/rajath/prime/src/primeExchange/models.py",
 		"/home/rajath/add/addressbook/abook/templates/abook/addplayer.html",
 		"/home/rajath/add/addressbook/abook/templates/abook/detail.html",
 		"/home/rajath/add/addressbook/abook/templates/abook/stats.html",
@@ -301,7 +300,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -409,13 +408,14 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 576.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -424,7 +424,37 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2666,
+						"buffer_size": 2759,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "primeExchange/models.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 182,
 						"regions":
 						{
 						},
@@ -444,35 +474,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/home/rajath/add/addressbook/abook/templates/abook/detail.html",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 713,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 72.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				},
 				{
