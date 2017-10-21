@@ -1,4 +1,4 @@
-#!/home/rajath/primeProject/newenv/bin/python
+#!/home/rajath/prime/newenv/bin/python
 
 import sys
 import getopt

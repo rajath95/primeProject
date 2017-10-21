@@ -40,7 +40,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/rajath/primeProject/newenv"
+VIRTUAL_ENV="/home/rajath/prime/newenv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
