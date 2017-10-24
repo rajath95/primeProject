@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 # Create your views here.
+from .forms import SignupForm
 from django.contrib.auth import login,authenticate
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
@@ -24,7 +25,7 @@ def primeDataExchangeAPI(request):
 
 def signup(request):
 	if request.method=="POST":
-		form=UserCreationForm(request.POST)
+		form=SignupForm(request.POST)
 		if form.is_valid():
 			form.save()
 			username=form.cleaned_data.get('username')
@@ -34,5 +35,5 @@ def signup(request):
 			#login(request,user)	
 			return render(request,'primeExchange/base.html')
 	else:
-		form=UserCreationForm()
+		form=SignupForm()
 	return render(request,"primeExchange/signup.html",{'form':form})

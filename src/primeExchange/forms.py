@@ -11,11 +11,19 @@ class LoginForm(AuthenticationForm):
 
 
 class SignupForm(UserCreationForm) :
+	ROLES=(('Prime_admin','Prime_Administrator'),
+	('Hospital_management','Hospital_Management'),
+	('Hospital_admin','Hospital_Administrator'),
+	)
 	first_name=forms.CharField(max_length=30,required=False,help_text='Optional.')
 	last_name=forms.CharField(max_length=30,required=False)
 	email=forms.EmailField(max_length=30)
-	
+	role=forms.ChoiceField(label="Select Role",choices=ROLES)
+	#widget=forms.Select(choices=ROLES)
+	#postal_address=forms.TextField(max_length=100,blank=True)
+	#userID is taken from email
+	#office_contact=fomrs
 	
 	class Meta:
 		model=User
-		fields=('username','first_name','last_name','email','password1','password2')
+		fields=('first_name','last_name','email','password1','password2','role')
