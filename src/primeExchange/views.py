@@ -1,6 +1,6 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
-# Create your views here.
 
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -20,3 +20,8 @@ def primeDataExchangeAPI(request):
 		api_response['BillingNumber'] = received_json_data.get('BillingNumber')
 		api_response['DataExchangeStatus'] = 'SUCCESS'
 	return Response(api_response)
+
+
+@login_required(login_url="login/")
+def home(request):
+	return render(request,"primeExchange/home.html")

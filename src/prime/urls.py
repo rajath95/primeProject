@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from primeExchange import views
+from primeExchange.forms import LoginForm
+from django.contrib.auth import views as view
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^primeDataExchangeAPI/$', include('primeExchange.urls')), 
+    url(r'^$',views.home),
+    url(r'^login/$',view.login,{'template_name':'primeExchange/login.html','authentication_form':LoginForm}),
+    #url(r'^logout/$', views.logout, {'next_page': '/login'}),  
 ]
