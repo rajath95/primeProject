@@ -61,6 +61,7 @@
 
 <script>
 {% if not user.is_authenticated %}
+/// hide privledged user options here 
 $("ul.nav.navbar-nav.navbar-right").css("display","none");
 {% endif %}
 </script>
