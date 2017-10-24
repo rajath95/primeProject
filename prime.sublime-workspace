@@ -1,0 +1,263 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"re",
+				"request"
+			],
+			[
+				"pers",
+				"person1"
+			],
+			[
+				"form",
+				"form_class"
+			],
+			[
+				"for",
+				"form"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"fo",
+				"forms"
+			],
+			[
+				"foin",
+				"font-family"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"per",
+				"person1"
+			],
+			[
+				"h",
+				"head\tTag"
+			],
+			[
+				"background-",
+				"background-color"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"ce",
+				"cellspacing\tAttr"
+			],
+			[
+				"de",
+				"detail"
+			],
+			[
+				"f",
+				"first_name"
+			],
+			[
+				"get",
+				"get_object_or_404"
+			],
+			[
+				"C",
+				"CharField"
+			],
+			[
+				"model",
+				"models"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/rajath/add/addressbook/abook/templates/abook/addplayer.html",
+		"/home/rajath/add/addressbook/abook/templates/abook/detail.html",
+		"/home/rajath/add/addressbook/abook/templates/abook/stats.html",
+		"/home/rajath/add/addressbook/abook/templates/abook/index.html",
+		"/home/rajath/add/addressbook/abook/forms2.py",
+		"/home/rajath/add/addressbook/abook/forms.py",
+		"/home/rajath/add/addressbook/abook/tests.py",
+		"/home/rajath/add/addressbook/abook/views.py",
+		"/home/rajath/add/addressbook/abook/urls.py",
+		"/home/rajath/add/addressbook/abook/models.py",
+		"/home/rajath/add/addressbook/abook/templates/abook/addstats.html",
+		"/home/rajath/add/addressbook/abook/templates/abook/newpage.html",
+		"/home/rajath/add/addressbook/abook/admin.py",
+		"/home/rajath/add/addressbook/addressbook/urls.py",
+		"/home/rajath/add/addressbook/addressbook/settings.py"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "prime.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 189.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

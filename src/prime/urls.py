@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from primeExchange.views import signup
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^primeDataExchangeAPI/$', include('primeExchange.urls')), 
+    url(r'^signup/$',signup,name="signup"),
 ]
