@@ -39,8 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'primeExchange',
-    'primeInvoiceable',
-    'primePredict',
+    
 )
 
 MIDDLEWARE_CLASSES = (

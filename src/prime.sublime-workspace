@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"auth",
+				"authenticate"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"login",
+				"login_account"
+			],
+			[
+				"create",
+				"create_account"
+			],
+			[
+				"a",
+				"account"
+			],
+			[
+				"prime",
+				"primeExchange"
+			],
+			[
+				"prim",
+				"primeExchange"
+			],
+			[
 				"b",
 				"bgcolor\tAttr"
 			],
@@ -46,10 +78,6 @@
 			[
 				"Pe",
 				"PlayerForm"
-			],
-			[
-				"re",
-				"request"
 			],
 			[
 				"pers",
@@ -124,90 +152,52 @@
 	"buffers":
 	[
 		{
-			"file": "/home/rajath/add/addressbook/abook/models.py",
+			"file": "primeExchange/views.py",
 			"settings":
 			{
-				"buffer_size": 862,
+				"buffer_size": 717,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/rajath/add/addressbook/abook/admin.py",
+			"contents": "\nfrom django.contrib.auth.forms import AuthenticationForm \nfrom django import forms\n\n\nclass LoginForm(AuthenticationForm):\n    username = forms.CharField(label=\"Username\", max_length=30, \n                               widget=forms.TextInput(attrs={'class': 'form-control', 'name': 'username'}))\n    password = forms.CharField(label=\"Password\", max_length=30, \n                               widget=forms.TextInput(attrs={'class': 'form-control', 'name': 'password'}))\n",
+			"file": "primeExchange/forms.py",
+			"file_size": 469,
+			"file_write_time": 131533095721334900,
 			"settings":
 			{
-				"buffer_size": 481,
+				"buffer_size": 469,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/rajath/add/addressbook/abook/forms.py",
+			"file": "primeExchange/urls.py",
 			"settings":
 			{
-				"buffer_size": 894,
+				"buffer_size": 135,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/rajath/add/addressbook/abook/templates/abook/stats.html",
+			"file": "prime/urls.py",
 			"settings":
 			{
-				"buffer_size": 957,
+				"buffer_size": 824,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "prime/settings.py",
+			"contents": "{% extends 'primeExchange/base.html' %}\n\n\n{% block content %}\n    {% if form.errors %}\n\n<p>Your username and password didn't match. Please try again.</p>\n{% endif %}\n\n{% if next %}\n    {% if user.is_authenticated %}\n\n<p>Your account doesn't have access to this page. To proceed,\n    please login with an account that has access.</p>\n    {% else %}\n\n<p>Please login to see this page.</p>\n    {% endif %}\n{% endif %}\n\n<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col-md-4 col-md-offset-4\">\n            <div class=\"login-panel panel panel-default\">\n                <div class=\"panel-heading\">\n                    <h3 class=\"panel-title\">Please Sign In</h3>\n                </div>\n                <div class=\"panel-body\">\n                    <form method=\"post\" action=\"{% url 'django.contrib.auth.views.login' %}\">\n{% csrf_token %}\n\n                        <p class=\"bs-component\">\n                            <table>\n                                <tr>\n                                    <td>{{ form.username.label_tag }}</td>\n                                    <td>{{ form.username }}</td>\n                                </tr>\n                                <tr>\n                                    <td>{{ form.password.label_tag }}</td>\n                                    <td>{{ form.password }}</td>\n                                </tr>\n                            </table>\n                        </p>\n                        <p class=\"bs-component\">\n                            <center>\n                                <input class=\"btn btn-success btn-sm\" type=\"submit\" value=\"login\" />\n                            </center>\n                        </p>\n                        <input type=\"hidden\" name=\"next\" value=\"{{ next }}\" />\n                    </form>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n{% endblock %}\n\n{% block javascript %}\n\n\n<script>\n{% if not user.is_authenticated %}\n/// hide privledged user options here \n$(\"ul.nav.navbar-nav.navbar-right\").css(\"display\",\"none\");\n{% endif %}\n</script>\n\n{% endblock %}\n",
+			"file": "primeExchange/templates/primeExchange/login.html",
+			"file_size": 2090,
+			"file_write_time": 131533094661976930,
 			"settings":
 			{
-				"buffer_size": 2759,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "primeExchange/models.py",
-			"settings":
-			{
-				"buffer_size": 182,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/rajath/add/addressbook/abook/templates/abook/index.html",
-			"settings":
-			{
-				"buffer_size": 975,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/rajath/add/addressbook/abook/views.py",
-			"settings":
-			{
-				"buffer_size": 1782,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/rajath/add/addressbook/abook/templates/abook/addplayer.html",
-			"settings":
-			{
-				"buffer_size": 391,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/rajath/add/addressbook/abook/templates/abook/addstats.html",
-			"settings":
-			{
-				"buffer_size": 438,
+				"buffer_size": 2090,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -250,26 +240,37 @@
 	],
 	"file_history":
 	[
-		"/home/rajath/prime/src/primeExchange/models.py",
-		"/home/rajath/add/addressbook/abook/templates/abook/addplayer.html",
-		"/home/rajath/add/addressbook/abook/templates/abook/detail.html",
-		"/home/rajath/add/addressbook/abook/templates/abook/stats.html",
-		"/home/rajath/add/addressbook/abook/templates/abook/index.html",
-		"/home/rajath/add/addressbook/abook/forms2.py",
-		"/home/rajath/add/addressbook/abook/forms.py",
-		"/home/rajath/add/addressbook/abook/tests.py",
-		"/home/rajath/add/addressbook/abook/views.py",
-		"/home/rajath/add/addressbook/abook/urls.py",
-		"/home/rajath/add/addressbook/abook/models.py",
+		"/home/rajath/prime/src/primeExchange/templates/primeExchange/login_account.html",
+		"/home/rajath/prime/src/primeExchange/templates/primeExchange/prime_home.html",
+		"/home/rajath/prime/src/primeExchange/templates/primeExchange/create_account.html",
+		"/home/rajath/prime/src/primeExchange/forms.py",
+		"/home/rajath/prime/src/prime.sublime-project",
+		"/home/rajath/prime/src/primeExchange/urls.py",
 		"/home/rajath/add/addressbook/abook/templates/abook/addstats.html",
-		"/home/rajath/add/addressbook/abook/templates/abook/newpage.html",
+		"/home/rajath/prime/src/primeExchange/views.py",
+		"/home/rajath/add/addressbook/abook/models.py",
 		"/home/rajath/add/addressbook/abook/admin.py",
+		"/home/rajath/prime/src/primeExchange/template/primeExchange/prime_base.html",
+		"/home/rajath/prime/src/primeExchange/template/primeExchange/prime_home.html",
+		"/home/rajath/prime/src/prime/settings.py",
+		"/home/rajath/add/addressbook/abook/forms.py",
+		"/home/rajath/add/addressbook/abook/templates/abook/stats.html",
+		"/home/rajath/prime/src/prime/urls.py",
+		"/home/rajath/add/addressbook/abook/templates/abook/addplayer.html",
+		"/home/rajath/add/addressbook/abook/views.py",
+		"/home/rajath/add/addressbook/abook/templates/abook/index.html",
+		"/home/rajath/prime/src/primeExchange/models.py",
+		"/home/rajath/add/addressbook/abook/templates/abook/detail.html",
+		"/home/rajath/add/addressbook/abook/forms2.py",
+		"/home/rajath/add/addressbook/abook/tests.py",
+		"/home/rajath/add/addressbook/abook/urls.py",
+		"/home/rajath/add/addressbook/abook/templates/abook/newpage.html",
 		"/home/rajath/add/addressbook/addressbook/urls.py",
 		"/home/rajath/add/addressbook/addressbook/settings.py"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -283,6 +284,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"forms.py"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -300,24 +302,24 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/home/rajath/add/addressbook/abook/models.py",
+					"file": "primeExchange/views.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 862,
+						"buffer_size": 717,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								567,
-								567
+								0,
+								0
 							]
 						],
 						"settings":
@@ -326,27 +328,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 72.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/home/rajath/add/addressbook/abook/admin.py",
+					"file": "primeExchange/forms.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 481,
+						"buffer_size": 469,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								474,
-								474
+								469,
+								469
 							]
 						],
 						"settings":
@@ -362,107 +364,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "/home/rajath/add/addressbook/abook/forms.py",
+					"file": "primeExchange/urls.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 894,
+						"buffer_size": 135,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								24,
-								24
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/home/rajath/add/addressbook/abook/templates/abook/stats.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 957,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								416,
-								416
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 576.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "prime/settings.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2759,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "primeExchange/models.py",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 182,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								135,
+								135
 							]
 						],
 						"settings":
@@ -473,123 +387,67 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "/home/rajath/add/addressbook/abook/templates/abook/index.html",
+					"buffer": 3,
+					"file": "prime/urls.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 975,
+						"buffer_size": 824,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								648,
-								648
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 576.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/home/rajath/add/addressbook/abook/views.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1782,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1685,
-								1685
+								824,
+								824
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 288.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "/home/rajath/add/addressbook/abook/templates/abook/addplayer.html",
+					"buffer": 4,
+					"file": "primeExchange/templates/primeExchange/login.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 391,
+						"buffer_size": 2090,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								179,
-								179
+								1656,
+								1656
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/home/rajath/add/addressbook/abook/templates/abook/addstats.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 438,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								412,
-								412
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 408.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -597,7 +455,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -634,7 +492,7 @@
 	"project": "prime.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 63.0
 	},
 	"save_all_on_build": true,
 	"select_file":
