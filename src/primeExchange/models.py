@@ -1,27 +1,30 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
 
 
-class UserData(models.Model):
-	def __str__(self):
-		return self.full_name
-
+class Profile(models.Model):
+	
 	ROLES=(('Prime_admin','Prime_Administrator'),
 	('Hospital_management','Hospital_Management'),
 	('Hospital_admin','Hospital_Administrator'),
 	)
-
-	first_name=models.CharField(max_length=30,help_text='Optional.')
-	last_name=models.CharField(max_length=30)
+	user=models.OneToOneField(User,on_delete=models.CASCADE)
+	first_name=models.CharField(max_length=20)
+	last_name=models.CharField(max_length=20)
+	username=models.CharField(max_length=10)
+	password = models.CharField(max_length=50)
 	email=models.EmailField(max_length=30)
-	#role=models.ChoiceField(label="Select Role",choices=ROLES)
-	#widget=models.Select(choices=ROLES)
-	postal_address=models.TextField(max_length=100,blank=True,null=True)
-	#userID is taken from email
-	office_contact=models.IntegerField()
-	mobile_contact=models.IntegerField()
+	role=models.CharField(default="Prime_Administrator",choices=ROLES,max_length=30)
+	mobile= models.CharField(max_length=10)
+	office_contact=models.CharField(max_length=10)
+	
+	
+	def __str__(self):
+		return self.full_name
+
 	
 
 

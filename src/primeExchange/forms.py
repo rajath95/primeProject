@@ -1,4 +1,5 @@
-from django.contrib.auth.models import User 
+from django.contrib.auth.models import User
+from .models import Profile 
 from django.contrib.auth.forms import AuthenticationForm,UserCreationForm
 from django import forms
 
@@ -10,20 +11,17 @@ class LoginForm(AuthenticationForm):
                                widget=forms.TextInput(attrs={'class': 'form-control', 'name': 'password'}))
 
 
-class SignupForm(UserCreationForm) :
-	ROLES=(('Prime_admin','Prime_Administrator'),
-	('Hospital_management','Hospital_Management'),
-	('Hospital_admin','Hospital_Administrator'),
-	)
-	first_name=forms.CharField(max_length=30,required=False,help_text='Optional.')
-	last_name=forms.CharField(max_length=30,required=False)
-	email=forms.EmailField(max_length=30)
-	role=forms.ChoiceField(label="Select Role",choices=ROLES)
+class SignupForm(forms.ModelForm) :
+
 	#widget=forms.Select(choices=ROLES)
 	#postal_address=forms.TextField(max_length=100,blank=True)
 	#userID is taken from email
 	#office_contact=fomrs
 	
+	#password = forms.CharField(max_length=50)
 	class Meta:
-		model=User
-		fields=('first_name','last_name','email','password1','password2','role')
+		model=Profile
+		fields=('user_id','username','first_name','password','last_name','email','role','office_contact','mobile')
+		widgets = {
+        'password': forms.PasswordInput(),
+    		}

@@ -28,10 +28,11 @@ def signup(request):
 		form=SignupForm(request.POST)
 		if form.is_valid():
 			form.save()
-			username=form.cleaned_data.get('username')
-			password=form.cleaned_data.get('password')
+
+			#username=form.cleaned_data.get('username')
+			#password=form.cleaned_data.get('password')
 			#user=User.objects.create_user(username,password)
-			user=authenticate(username=	username,password=password)
+			#user=authenticate(username=	username,password=password1)
 			#login(request,user)	
 			return render(request,'primeExchange/base.html')
 	else:
