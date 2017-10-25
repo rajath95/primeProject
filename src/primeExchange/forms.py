@@ -21,7 +21,12 @@ class SignupForm(forms.ModelForm) :
 	#password = forms.CharField(max_length=50)
 	class Meta:
 		model=Profile
-		fields=('user_id','username','first_name','password','last_name','email','role','office_contact','mobile')
+		fields=('username','first_name','password','last_name','email','role','office_contact','mobile')
 		widgets = {
         'password': forms.PasswordInput(),
     		}
+
+class UserForm(forms.ModelForm):
+	class Meta:
+		model=User
+		fields=('username','email')
