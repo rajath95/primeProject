@@ -1,8 +1,8 @@
 from django.shortcuts import render,redirect
 # Create your views here.
 from .models import Profile
-from .forms import SignupForm,UserForm
-from django.contrib.auth import login,authenticate
+from .forms import SignupForm,LoginForm,UserForm
+from django.contrib.auth import login,authenticate,logout,get_user_model
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from rest_framework.response import Response
@@ -45,3 +45,23 @@ def update_profile(request):
         profile_form = SignupForm(instance=request.user.profile)
     return render(request, 'primeExchange/signup.html', {'user_form': user_form,
         'profile_form': profile_form})
+
+
+def login_view(request):
+
+	form=LoginForm(request.POST or None)
+	if form.is_valid():
+			username=form.cleaned_data.get("username")
+			password=form.cleaned_data.get("password")
+			user=authenticate(username=username,password=password)
+			login(request,user)
+			return render(request,'primeExchange/base.html',{})
+	return render(request,"primeExchange/login.html",{"form":form})
+
+
+def logout_view(request):
+	logout(request)
+	return render(request,"primeExchange/login.html",{})
+	
+
+

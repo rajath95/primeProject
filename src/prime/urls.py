@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from primeExchange.views import update_profile
+from primeExchange.views import update_profile,login_view,logout_view
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^primeDataExchangeAPI/$', include('primeExchange.urls')), 
     url(r'^signup/$',update_profile),
+    url(r'^login/$',login_view),
+    url(r'^logout/$',logout_view),
 ]
