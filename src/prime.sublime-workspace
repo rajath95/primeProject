@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"pr",
+				"primeuser95"
+			],
+			[
+				"prime",
+				"primeuser95"
+			],
+			[
 				"auth",
 				"auth_views"
 			],
@@ -70,10 +78,6 @@
 			[
 				"a",
 				"account"
-			],
-			[
-				"prime",
-				"primeExchange"
 			],
 			[
 				"prim",
@@ -195,6 +199,33 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "prime/settings.py",
+			"settings":
+			{
+				"buffer_size": 3027,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "prime/urls.py",
+			"settings":
+			{
+				"buffer_size": 1543,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "primeExchange/forms.py",
+			"settings":
+			{
+				"buffer_size": 1768,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -229,7 +260,8 @@
 	"expanded_folders":
 	[
 		"/home/rajath/prime/src",
-		"/home/rajath/prime/src/prime"
+		"/home/rajath/prime/src/prime",
+		"/home/rajath/prime/src/primeExchange"
 	],
 	"file_history":
 	[
@@ -301,8 +333,97 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "prime/settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3027,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1119,
+								1119
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 529.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "prime/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1543,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1540,
+								1540
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "primeExchange/forms.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1768,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1461,
+								1461
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],

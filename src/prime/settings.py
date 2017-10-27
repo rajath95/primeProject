@@ -115,3 +115,7 @@ EMAIL_HOST_USER = 'primeuser95@gmail.com'
 EMAIL_HOST_PASSWORD = 'eautomaton123'
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'primeuser95@gmail.com'
+
+
+LOGIN_URL='/login'
+LOGIN_REDIRECT_URL='/login'
