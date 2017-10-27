@@ -3,7 +3,7 @@ from .models import Profile
 from django.contrib.auth.forms import AuthenticationForm,UserCreationForm
 from django import forms
 from django.contrib.auth import login,authenticate
-
+from captcha.fields import CaptchaField
 
 class LoginForm(forms.Form):
     username = forms.CharField(label="Username", max_length=30, 

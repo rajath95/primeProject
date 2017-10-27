@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'primeExchange',
+    'captcha'
     
 )
 
@@ -104,3 +105,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+SERVER_EMAIL='primeuser95@gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'primeuser95@gmail.com'
+EMAIL_HOST_PASSWORD = 'eautomaton123'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'primeuser95@gmail.com'
