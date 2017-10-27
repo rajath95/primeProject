@@ -32,6 +32,7 @@ class SignupForm(forms.ModelForm) :
 	#office_contact=fomrs
 	
 	confirm_email=forms.EmailField(label="Confirm Email")
+	captcha = CaptchaField()
 	class Meta:
 		model=Profile
 		fields=('username','first_name','password','last_name','email','role','office_contact','mobile')
