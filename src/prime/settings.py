@@ -118,4 +118,4 @@ DEFAULT_FROM_EMAIL = 'primeuser95@gmail.com'
 
 
 LOGIN_URL='/login'
-LOGIN_REDIRECT_URL='/login'
+LOGIN_REDIRECT_URL='/base'
