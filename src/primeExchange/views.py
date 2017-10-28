@@ -9,6 +9,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django import forms
 import json
 
 @api_view()
@@ -33,11 +34,13 @@ def update_profile(request):
     if request.method == 'POST':
         user_form = UserForm(request.POST, instance=request.user)
         profile_form = SignupForm(request.POST, instance=request.user.profile)
+        
         if user_form.is_valid() and profile_form.is_valid():
-            user_form.save()
-            profile_form.save()
+            	user_form.save()
+            	profile_form.save()	 
+
             #messages.success(request, ('Your profile was successfully updated!'))
-            return render(request,'primeExchange/base.html',{})
+            	return render(request,'primeExchange/base.html',{})
         else:
         	pass
     else:
