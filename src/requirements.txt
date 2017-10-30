@@ -1,4 +1,11 @@
+adium-theme-ubuntu==0.3.4
 Django==1.8.6
-djangorestframework==3.7.1
-mysqlclient==1.3.12
-South==1.0.2
+f.lux-indicator-applet==1.1.11rc0
+gyp==0.1
+pexpect==4.0.1
+ptyprocess==0.5
+pygobject==3.20.0
+pytz==2017.2
+pyxdg==0.25
+unity-lens-photos==1.0
+virtualenv==15.1.0

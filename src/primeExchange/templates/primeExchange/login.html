@@ -12,9 +12,15 @@
 <form action="." method="post">
 {{ form.as_p }}
 {% csrf_token %}
-<p><input type="submit" class="btn btn-default"  value="Log-in"> 
 
+<p><input type="submit" class="btn btn-default"  value="Log-in"> 
+ <p>
 <a href="/password_reset" class="btn btn-default">Reset Password!</a>
+<br />
 </p>
+
+<a href="/signup" class="btn btn-default">Signup</a>
+</p>
+
 </form>
 {% endblock %}
