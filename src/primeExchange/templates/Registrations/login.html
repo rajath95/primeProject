@@ -1,27 +1,19 @@
 
 
+
 <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
       rel="stylesheet">
 
 
 {% block title %}Log-in{% endblock %}
 {% block content %}
-<h1>Log-in</h1>
-<br />
+<h1>Login</h1>
+Enter the credentials
 <p>Please, use the following form to log-in:</p>
 <form action="." method="post">
-{% csrf_token %}
 {{ form.as_p }}
 {% csrf_token %}
-
-<p><input type="submit" class="btn btn-default"  value="Log-in"> 
- <p>
-<a href="/password_reset" class="btn btn-default">Reset Password!</a>
-<br />
-</p>
-
-<a href="/signup" class="btn btn-default">Signup</a>
-</p>
+<p><input type="submit" value="Log-in"></p>
 
 </form>
 {% endblock %}

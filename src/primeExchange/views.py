@@ -34,13 +34,16 @@ def update_profile(request):
     if request.method == 'POST':
         user_form = UserForm(request.POST, instance=request.user)
         profile_form = SignupForm(request.POST, instance=request.user.profile)
+        z=""
         
         if user_form.is_valid() and profile_form.is_valid():
             	user_form.save()
-            	profile_form.save()	 
-
+            	profile_form.save()	
+            	z= profile_form.cleaned_data['role']
+            	print(z)
+            	request.session['role']=z
             #messages.success(request, ('Your profile was successfully updated!'))
-            	return render(request,'primeExchange/base.html',{})
+            	return render(request,'primeExchange/base.html',{'role':z})
         else:
         	pass
     else:
@@ -57,21 +60,29 @@ def login_view(request):
 			username=form.cleaned_data.get("username")
 			password=form.cleaned_data.get("password")
 			user=authenticate(username=username,password=password)
+			person=User.objects.get(username=username)
+			guy=Profile.objects.get(user=person)
+			print(guy.role)
+			request.session['role']=guy.role
 			login(request,user)
-			return render(request,'primeExchange/base.html',{})
+			return render(request,'primeExchange/base.html',{'role':guy.role,'name':person.username})
 	return render(request,"primeExchange/login.html",{"form":form})
 
 
 def logout_view(request):
-	logout(request)
-	return render(request,"primeExchange/login.html",{})
+	role="0"
+	if 'role' in request.session:
+		role=request.session['role']
+		if role=='Prime_Administrator':
+			print("hello")
+			return render(request,"primeExchange/signup.html",{})
+	print(role)
+	print(role)
+	print(role)
+	print("999")
+	#logout(request)
+	return render(request,"primeExchange/logout.html",{})
 	
-
-
-
-
-
-
 
 
 
@@ -79,7 +90,17 @@ def logout_view(request):
 
 @login_required
 def base(request):
-	return render(request,"primeExchange/base.html",{})
+	
+
+	role="none"
+	if 'role' in request.session:
+		role=request.session['role']
+		print(role)
+
+
+
+
+	return render(request,"primeExchange/base.html",{'role':role})
 
 
 
