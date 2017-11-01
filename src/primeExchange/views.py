@@ -68,8 +68,19 @@ def logout_view(request):
 	
 
 
+
+
+
+
+
+
+
+
+
 @login_required
 def base(request):
 	return render(request,"primeExchange/base.html",{})
+
+
 
 
