@@ -16,12 +16,13 @@ Including another URLconf
 from django.contrib.auth import views as auth_views
 from django.conf.urls import include, url
 from django.contrib import admin    
-from primeExchange.views import update_profile,login_view,logout_view,base
+from primeExchange.views import signup,login_view,logout_view,base,process_login
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^primeDataExchangeAPI/$', include('primeExchange.urls')), 
-    url(r'^signup/$',update_profile),
+    url(r'^signup/$',signup),
+    url(r'^process_login',process_login),
     url(r'^login/$',login_view,name="login"),
     url(r'^logout/$',logout_view,name="logout"),
     url(r'^password_reset/$', auth_views.password_reset, name='password_reset'),

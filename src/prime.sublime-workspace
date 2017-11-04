@@ -4,80 +4,44 @@
 		"selected_items":
 		[
 			[
-				"sess",
-				"session_key"
-			],
-			[
-				"use",
-				"user_from_session_key"
-			],
-			[
-				"pr",
-				"primeExchange"
-			],
-			[
-				"lo",
-				"login_required"
-			],
-			[
-				"cl",
-				"cleaned_data"
-			],
-			[
-				"U",
-				"UserForm"
-			],
-			[
-				"prime",
-				"primeuser95"
-			],
-			[
-				"auth",
-				"auth_views"
-			],
-			[
-				"E",
-				"EMAIL_PORT"
-			],
-			[
-				"EM",
-				"EMAIL_HOST_USER"
-			],
-			[
-				"password_reset_",
-				"password_reset_confirm"
-			],
-			[
-				"e",
-				"email_qs"
-			],
-			[
-				"em",
-				"email2"
-			],
-			[
-				"con",
-				"confirm_email"
-			],
-			[
-				"au",
-				"authenticate"
-			],
-			[
-				"clean",
-				"cleaned_data"
+				"re",
+				"request"
 			],
 			[
 				"us",
-				"user"
+				"username"
+			],
+			[
+				"a",
+				"authenticate"
+			],
+			[
+				"user",
+				"user_form"
+			],
+			[
+				"p",
+				"password"
+			],
+			[
+				"pro",
+				"process_login"
+			],
+			[
+				"rende",
+				"render_to_response"
+			],
+			[
+				"use",
+				"username"
+			],
+			[
+				"auth",
+				"authenticate"
 			],
 			[
 				"in",
 				"input\tTag"
-			],
-			[
-				"re",
-				"request"
 			],
 			[
 				"login",
@@ -88,8 +52,8 @@
 				"create_account"
 			],
 			[
-				"a",
-				"account"
+				"prime",
+				"primeExchange"
 			],
 			[
 				"prim",
@@ -126,6 +90,10 @@
 			[
 				"fon",
 				"font-family"
+			],
+			[
+				"cl",
+				"clean_id"
 			],
 			[
 				"i",
@@ -208,30 +176,11 @@
 	"buffers":
 	[
 		{
-			"file": "prime/settings.py",
+			"file": "primeExchange/views.py",
 			"settings":
 			{
-				"buffer_size": 3076,
+				"buffer_size": 3180,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "primeExchange/templates/Registrations/password_reset_complete.html",
-			"settings":
-			{
-				"buffer_size": 174,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "\n\n\n<link href=\"http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css\"\n      rel=\"stylesheet\">\n\n\n{% block title %}Log-in{% endblock %}\n{% block content %}\n<h1>Login</h1>\nEnter the credentials\n<p>Please, use the following form to log-in:</p>\n<form action=\".\" method=\"post\">\n{{ form.as_p }}\n{% csrf_token %}\n<p><input type=\"submit\" value=\"Log-in\"></p>\n\n</form>\n{% endblock %}",
-			"file": "primeExchange/templates/Registrations/login.html",
-			"file_size": 431,
-			"file_write_time": 131536458794858206,
-			"settings":
-			{
-				"buffer_size": 387,
 				"line_ending": "Unix"
 			}
 		},
@@ -239,25 +188,31 @@
 			"file": "primeExchange/templates/primeExchange/login.html",
 			"settings":
 			{
-				"buffer_size": 541,
-				"encoding": "UTF-8",
+				"buffer_size": 558,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "prime/urls.py",
+			"file": "primeExchange/urls.py",
 			"settings":
 			{
-				"buffer_size": 1710,
-				"encoding": "UTF-8",
+				"buffer_size": 135,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "primeExchange/templates/primeExchange/logout.html",
+			"file": "primeExchange/models.py",
 			"settings":
 			{
-				"buffer_size": 119,
+				"buffer_size": 1130,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "primeExchange/templates/primeExchange/base.html",
+			"settings":
+			{
+				"buffer_size": 20155,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -267,62 +222,48 @@
 			"settings":
 			{
 				"buffer_size": 257,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "prime/settings.py",
+			"settings":
+			{
+				"buffer_size": 3076,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "primeExchange/forms.py",
+			"settings":
+			{
+				"buffer_size": 1948,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "primeExchange/views.py",
+			"file": "/home/rajath/acc/src/manage.py",
 			"settings":
 			{
-				"buffer_size": 3363,
+				"buffer_size": 251,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "primeExchange/admin.py",
+			"settings":
+			{
+				"buffer_size": 315,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "prime/urls.py",
+			"settings":
+			{
+				"buffer_size": 1605,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "requirements.txt",
-			"settings":
-			{
-				"buffer_size": 199,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n \t\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Medilab Free Bootstrap HTML5 Template</title>\n  <meta name=\"description\" content=\"Free Bootstrap Theme by BootstrapMade.com\">\n  <meta name=\"keywords\" content=\"free website templates, free bootstrap themes, free template, free bootstrap, free website template\">\n\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal\">\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"css/font-awesome.min.css\">\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"css/bootstrap.min.css\">\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\">\n  <!-- =======================================================\n    Theme Name: Medilab\n    Theme URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/\n    Author: BootstrapMade.com\n    Author URL: https://bootstrapmade.com\n  ======================================================= -->\n</head>\n\n<body id=\"myPage\" data-spy=\"scroll\" data-target=\".navbar\" data-offset=\"60\">\n  <!--banner-->\n  <section id=\"banner\" class=\"banner\">\n    <div class=\"bg-color\">\n      <nav class=\"navbar navbar-default navbar-fixed-top\">\n        <div class=\"container\">\n          <div class=\"col-md-12\">\n            <div class=\"navbar-header\">\n              <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#myNavbar\">\n\t\t\t\t        <span class=\"icon-bar\"></span>\n\t\t\t\t        <span class=\"icon-bar\"></span>\n\t\t\t\t        <span class=\"icon-bar\"></span>\n\t\t\t\t      </button>\n              <a class=\"navbar-brand\" href=\"#\"><img src=\"img/logo.png\" class=\"img-responsive\" style=\"width: 140px; margin-top: -16px;\"></a>\n            </div>\n            <div class=\"collapse navbar-collapse navbar-right\" id=\"myNavbar\">\n              <ul class=\"nav navbar-nav\">\n                <li class=\"active\"><a href=\"#banner\">Home</a></li>\n                <li class=\"\"><a href=\"#service\">Services</a></li>\n                <li class=\"\"><a href=\"#about\">About</a></li>\n                <li class=\"\"><a href=\"#testimonial\">Testimonial</a></li>\n                <li class=\"\"><a href=\"#contact\">Contact</a></li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </nav>\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"banner-info\">\n            <div class=\"banner-logo text-center\">\n              <img src=\"img/logo.png\" class=\"img-responsive\">\n            </div>\n            <div class=\"banner-text text-center\">\n              <h1 class=\"white\">Healthcare at your desk!!</h1>\n              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>tempor incididunt ut labore et dolore magna aliqua.</p>\n              <a href=\"#contact\" class=\"btn btn-appoint\">Make an Appointment.</a>\n            </div>\n            <div class=\"overlay-detail text-center\">\n              <a href=\"#service\"><i class=\"fa fa-angle-down\"></i></a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  <!--/ banner-->\n  <!--service-->\n  <section id=\"service\" class=\"section-padding\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-4 col-sm-4\">\n          <h2 class=\"ser-title\">Our Service</h2>\n          <hr class=\"botm-line\">\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris cillum.</p>\n        </div>\n        <div class=\"col-md-4 col-sm-4\">\n          <div class=\"service-info\">\n            <div class=\"icon\">\n              <i class=\"fa fa-stethoscope\"></i>\n            </div>\n            <div class=\"icon-info\">\n              <h4>24 Hour Support</h4>\n              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n            </div>\n          </div>\n          <div class=\"service-info\">\n            <div class=\"icon\">\n              <i class=\"fa fa-ambulance\"></i>\n            </div>\n            <div class=\"icon-info\">\n              <h4>Emergency Services</h4>\n              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-md-4 col-sm-4\">\n          <div class=\"service-info\">\n            <div class=\"icon\">\n              <i class=\"fa fa-user-md\"></i>\n            </div>\n            <div class=\"icon-info\">\n              <h4>Medical Counseling</h4>\n              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n            </div>\n          </div>\n          <div class=\"service-info\">\n            <div class=\"icon\">\n              <i class=\"fa fa-medkit\"></i>\n            </div>\n            <div class=\"icon-info\">\n              <h4>Premium Healthcare</h4>\n              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  <!--/ service-->\n  <!--cta-->\n  <section id=\"cta-1\" class=\"section-padding\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"schedule-tab\">\n          <div class=\"col-md-4 col-sm-4 bor-left\">\n            <div class=\"mt-boxy-color\"></div>\n            <div class=\"medi-info\">\n              <h3>Emergency Case</h3>\n              <p>I am text block. Edit this text from Appearance / Customize / Homepage header columns. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>\n              <a href=\"#\" class=\"medi-info-btn\">READ MORE</a>\n            </div>\n          </div>\n          <div class=\"col-md-4 col-sm-4\">\n            <div class=\"medi-info\">\n              <h3>Emergency Case</h3>\n              <p>I am text block. Edit this text from Appearance / Customize / Homepage header columns. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>\n              <a href=\"#\" class=\"medi-info-btn\">READ MORE</a>\n            </div>\n          </div>\n          <div class=\"col-md-4 col-sm-4 mt-boxy-3\">\n            <div class=\"mt-boxy-color\"></div>\n            <div class=\"time-info\">\n              <h3>Opening Hours</h3>\n              <table style=\"margin: 8px 0px 0px;\" border=\"1\">\n                <tbody>\n                  <tr>\n                    <td>Monday - Friday</td>\n                    <td>8.00 - 17.00</td>\n                  </tr>\n                  <tr>\n                    <td>Saturday</td>\n                    <td>9.30 - 17.30</td>\n                  </tr>\n                  <tr>\n                    <td>Sunday</td>\n                    <td>9.30 - 15.00</td>\n                  </tr>\n                </tbody>\n              </table>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  <!--cta-->\n  <!--about-->\n  <section id=\"about\" class=\"section-padding\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-3 col-sm-4 col-xs-12\">\n          <div class=\"section-title\">\n            <h2 class=\"head-title lg-line\">The Medilap <br>Ultimate Dream</h2>\n            <hr class=\"botm-line\">\n            <p class=\"sec-para\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>\n            <a href=\"\" style=\"color: #0cb8b6; padding-top:10px;\">Know more..</a>\n          </div>\n        </div>\n        <div class=\"col-md-9 col-sm-8 col-xs-12\">\n          <div style=\"visibility: visible;\" class=\"col-sm-9 more-features-box\">\n            <div class=\"more-features-box-text\">\n              <div class=\"more-features-box-text-icon\"> <i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i> </div>\n              <div class=\"more-features-box-text-description\">\n                <h3>It's something important you want to know.</h3>\n                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.</p>\n              </div>\n            </div>\n            <div class=\"more-features-box-text\">\n              <div class=\"more-features-box-text-icon\"> <i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i> </div>\n              <div class=\"more-features-box-text-description\">\n                <h3>It's something important you want to know.</h3>\n                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.</p>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  <!--/ about-->\n  <!--doctor team-->\n  <section id=\"doctor-team\" class=\"section-padding\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <h2 class=\"ser-title\">Meet Our Doctors!</h2>\n          <hr class=\"botm-line\">\n        </div>\n        <div class=\"col-md-3 col-sm-3 col-xs-6\">\n          <div class=\"thumbnail\">\n            <img src=\"img/doctor1.jpg\" alt=\"...\" class=\"team-img\">\n            <div class=\"caption\">\n              <h3>Jessica Wally</h3>\n              <p>Doctor</p>\n              <ul class=\"list-inline\">\n                <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>\n                <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>\n                <li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li>\n              </ul>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-md-3 col-sm-3 col-xs-6\">\n          <div class=\"thumbnail\">\n            <img src=\"img/doctor2.jpg\" alt=\"...\" class=\"team-img\">\n            <div class=\"caption\">\n              <h3>Iai Donas</h3>\n              <p>Doctor</p>\n              <ul class=\"list-inline\">\n                <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>\n                <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>\n                <li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li>\n              </ul>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-md-3 col-sm-3 col-xs-6\">\n          <div class=\"thumbnail\">\n            <img src=\"img/doctor3.jpg\" alt=\"...\" class=\"team-img\">\n            <div class=\"caption\">\n              <h3>Amanda Denyl</h3>\n              <p>Doctor</p>\n              <ul class=\"list-inline\">\n                <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>\n                <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>\n                <li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li>\n              </ul>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-md-3 col-sm-3 col-xs-6\">\n          <div class=\"thumbnail\">\n            <img src=\"img/doctor4.jpg\" alt=\"...\" class=\"team-img\">\n            <div class=\"caption\">\n              <h3>Jason Davis</h3>\n              <p>Doctor</p>\n              <ul class=\"list-inline\">\n                <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>\n                <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>\n                <li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  <!--/ doctor team-->\n  <!--testimonial-->\n  <section id=\"testimonial\" class=\"section-padding\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <h2 class=\"ser-title\">see what patients are saying?</h2>\n          <hr class=\"botm-line\">\n        </div>\n        <div class=\"col-md-4 col-sm-4\">\n          <div class=\"testi-details\">\n            <!-- Paragraph -->\n            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n          </div>\n          <div class=\"testi-info\">\n            <!-- User Image -->\n            <a href=\"#\"><img src=\"img/thumb.png\" alt=\"\" class=\"img-responsive\"></a>\n            <!-- User Name -->\n            <h3>Alex<span>Texas</span></h3>\n          </div>\n        </div>\n        <div class=\"col-md-4 col-sm-4\">\n          <div class=\"testi-details\">\n            <!-- Paragraph -->\n            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n          </div>\n          <div class=\"testi-info\">\n            <!-- User Image -->\n            <a href=\"#\"><img src=\"img/thumb.png\" alt=\"\" class=\"img-responsive\"></a>\n            <!-- User Name -->\n            <h3>Alex<span>Texas</span></h3>\n          </div>\n        </div>\n        <div class=\"col-md-4 col-sm-4\">\n          <div class=\"testi-details\">\n            <!-- Paragraph -->\n            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n          </div>\n          <div class=\"testi-info\">\n            <!-- User Image -->\n            <a href=\"#\"><img src=\"img/thumb.png\" alt=\"\" class=\"img-responsive\"></a>\n            <!-- User Name -->\n            <h3>Alex<span>Texas</span></h3>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  <!--/ testimonial-->\n  <!--cta 2-->\n  <section id=\"cta-2\" class=\"section-padding\">\n    <div class=\"container\">\n      <div class=\" row\">\n        <div class=\"col-md-2\"></div>\n        <div class=\"text-right-md col-md-4 col-sm-4\">\n          <h2 class=\"section-title white lg-line\">« A few words<br> about us »</h2>\n        </div>\n        <div class=\"col-md-4 col-sm-5\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typek\n          <p class=\"text-right text-primary\"><i>— Medilap Healthcare</i></p>\n        </div>\n        <div class=\"col-md-2\"></div>\n      </div>\n    </div>\n  </section>\n  <!--cta-->\n  <!--contact-->\n  <section id=\"contact\" class=\"section-padding\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <h2 class=\"ser-title\">Contact us</h2>\n          <hr class=\"botm-line\">\n        </div>\n        <div class=\"col-md-4 col-sm-4\">\n          <h3>Contact Info</h3>\n          <div class=\"space\"></div>\n          <p><i class=\"fa fa-map-marker fa-fw pull-left fa-2x\"></i>321 Awesome Street<br> New York, NY 17022</p>\n          <div class=\"space\"></div>\n          <p><i class=\"fa fa-envelope-o fa-fw pull-left fa-2x\"></i>info@companyname.com</p>\n          <div class=\"space\"></div>\n          <p><i class=\"fa fa-phone fa-fw pull-left fa-2x\"></i>+1 800 123 1234</p>\n        </div>\n        <div class=\"col-md-8 col-sm-8 marb20\">\n          <div class=\"contact-info\">\n            <h3 class=\"cnt-ttl\">Having Any Query! Or Book an appointment</h3>\n            <div class=\"space\"></div>\n            <div id=\"sendmessage\">Your message has been sent. Thank you!</div>\n            <div id=\"errormessage\"></div>\n            <form action=\"\" method=\"post\" role=\"form\" class=\"contactForm\">\n              <div class=\"form-group\">\n                <input type=\"text\" name=\"name\" class=\"form-control br-radius-zero\" id=\"name\" placeholder=\"Your Name\" data-rule=\"minlen:4\" data-msg=\"Please enter at least 4 chars\" />\n                <div class=\"validation\"></div>\n              </div>\n              <div class=\"form-group\">\n                <input type=\"email\" class=\"form-control br-radius-zero\" name=\"email\" id=\"email\" placeholder=\"Your Email\" data-rule=\"email\" data-msg=\"Please enter a valid email\" />\n                <div class=\"validation\"></div>\n              </div>\n              <div class=\"form-group\">\n                <input type=\"text\" class=\"form-control br-radius-zero\" name=\"subject\" id=\"subject\" placeholder=\"Subject\" data-rule=\"minlen:4\" data-msg=\"Please enter at least 8 chars of subject\" />\n                <div class=\"validation\"></div>\n              </div>\n              <div class=\"form-group\">\n                <textarea class=\"form-control br-radius-zero\" name=\"message\" rows=\"5\" data-rule=\"required\" data-msg=\"Please write something for us\" placeholder=\"Message\"></textarea>\n                <div class=\"validation\"></div>\n              </div>\n\n              <div class=\"form-action\">\n                <button type=\"submit\" class=\"btn btn-form\">Send Message</button>\n              </div>\n            </form>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  <!--/ contact-->\n  <!--footer-->\n  <footer id=\"footer\">\n    <div class=\"top-footer\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-md-4 col-sm-4 marb20\">\n            <div class=\"ftr-tle\">\n              <h4 class=\"white no-padding\">About Us</h4>\n            </div>\n            <div class=\"info-sec\">\n              <p>Praesent convallis tortor et enim laoreet, vel consectetur purus latoque penatibus et dis parturient.</p>\n            </div>\n          </div>\n          <div class=\"col-md-4 col-sm-4 marb20\">\n            <div class=\"ftr-tle\">\n              <h4 class=\"white no-padding\">Quick Links</h4>\n            </div>\n            <div class=\"info-sec\">\n              <ul class=\"quick-info\">\n                <li><a href=\"index.html\"><i class=\"fa fa-circle\"></i>Home</a></li>\n                <li><a href=\"#service\"><i class=\"fa fa-circle\"></i>Service</a></li>\n                <li><a href=\"#contact\"><i class=\"fa fa-circle\"></i>Appointment</a></li>\n              </ul>\n            </div>\n          </div>\n          <div class=\"col-md-4 col-sm-4 marb20\">\n            <div class=\"ftr-tle\">\n              <h4 class=\"white no-padding\">Follow us</h4>\n            </div>\n            <div class=\"info-sec\">\n              <ul class=\"social-icon\">\n                <li class=\"bglight-blue\"><i class=\"fa fa-facebook\"></i></li>\n                <li class=\"bgred\"><i class=\"fa fa-google-plus\"></i></li>\n                <li class=\"bgdark-blue\"><i class=\"fa fa-linkedin\"></i></li>\n                <li class=\"bglight-blue\"><i class=\"fa fa-twitter\"></i></li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"footer-line\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-md-12 text-center\">\n            © Copyright Medilab Theme. All Rights Reserved\n            <div class=\"credits\">\n              <!--\n                All the links in the footer should remain intact.\n                You can delete the links only if you purchased the pro version.\n                Licensing information: https://bootstrapmade.com/license/\n                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Medilab\n              -->\n              Designed by <a href=\"https://bootstrapmade.com/\">BootstrapMade.com</a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </footer>\n  <!--/ footer-->\n\n  <script src=\"js/jquery.min.js\"></script>\n  <script src=\"js/jquery.easing.min.js\"></script>\n  <script src=\"js/bootstrap.min.js\"></script>\n  <script src=\"js/custom.js\"></script>\n  <script src=\"contactform/contactform.js\"></script>\n\n</body>\n\n</html>\n",
-			"file": "/home/rajath/Documents/Experiment/Medilab/index.html",
-			"file_size": 19918,
-			"file_write_time": 131530648560000000,
-			"settings":
-			{
-				"buffer_size": 19457,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/home/rajath/add/addressbook/abook/templates/abook/addstats.html",
-			"settings":
-			{
-				"buffer_size": 438,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n\n\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Medilab Free Bootstrap HTML5 Template</title>\n  <meta name=\"description\" content=\"Free Bootstrap Theme by BootstrapMade.com\">\n  <meta name=\"keywords\" content=\"free website templates, free bootstrap themes, free template, free bootstrap, free website template\">\n\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal\">\n\n  {% load staticfiles %}\n\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"{% static 'primeExchange/css/font-awesome.min.css' %}\">\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"{% static 'primeExchange/css/bootstrap.min.css' %}\">\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"{% static 'primeExchange/css/style.css' %}\">\n  <!-- =======================================================\n    Theme Name: Prime\n    Theme URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/\n    Author: BootstrapMade.com\n    Author URL: https://bootstrapmade.com\n  ======================================================= -->\n</head>\n\n<body id=\"myPage\" data-spy=\"scroll\" data-target=\".navbar\" data-offset=\"60\">\n  <!--banner-->\n  <section id=\"banner\" class=\"banner\">\n    <div class=\"bg-color\">\n      <nav class=\"navbar navbar-default navbar-fixed-top\">\n        <div class=\"container\">\n          <div class=\"col-md-12\">\n            <div class=\"navbar-header\">\n              <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#myNavbar\">\n\t\t\t\t        <span class=\"icon-bar\"></span>\n\t\t\t\t        <span class=\"icon-bar\"></span>\n\t\t\t\t        <span class=\"icon-bar\"></span>\n\t\t\t\t      </button>\n              <a class=\"navbar-brand\" href=\"#\"><img src=\"{% static 'primeExchange/img/logo.png' %}\" class=\"img-responsive\" style=\"width: 140px; margin-top: -16px;\"></a>\n            </div>\n            <div class=\"collapse navbar-collapse navbar-right\" id=\"myNavbar\">\n              <ul class=\"nav navbar-nav\">\n                <li class=\"active\"><a href=\"#banner\">Home</a></li>\n                <li class=\"\"><a href=\"#service\">Reports\t</a></li>\n                <li class=\"\"><a href=\"#about\">Analytics</a></li>\n                <li class=\"\"><a href=\"#testimonial\">Client Access</a></li>\n                <li class=\"\"><a href=\"#login.html\">Prime Admin</a></li>\n                <li class=\"\"><a href=\"#contact\">Contact</a></li>\n                <li class=\"\"><a href=\"../logout\">Logout   </a></li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </nav>\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"banner-info\">\n            <div class=\"banner-logo text-center\">\n\n              <img src=\"{% static 'primeExchange/img/logo.png' %}\" class=\"img-responsive\">\n            </div>\n            <div class=\"banner-text text-center\">\n              <h1 class=\"white\">PRIME CONTROL CENTER</h1>\n              <p> Patent Revenue Intelligence Maximization Engine <sup> TM </sup></p>\n              <a href=\"#contact\" class=\"btn btn-appoint\">Send us a feedback.</a>\n            </div>\n            <div class=\"overlay-detail text-center\">\n              <a href=\"#service\"><i class=\"fa fa-angle-down\"></i></a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  <!--/ banner-->\n  <!--service-->\n  <section id=\"service\" class=\"section-padding\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-4 col-sm-4\">\n          <h2 class=\"ser-title\">Our Service</h2>\n          <hr class=\"botm-line\">\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris cillum.</p>\n        </div>\n        <div class=\"col-md-4 col-sm-4\">\n          <div class=\"service-info\">\n            <div class=\"icon\">\n              <i class=\"fa fa-stethoscope\"></i>\n            </div>\n            <div class=\"icon-info\">\n              <h4>24 Hour Support</h4>\n              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n            </div>\n          </div>\n          <div class=\"service-info\">\n            <div class=\"icon\">\n              <i class=\"fa fa-ambulance\"></i>\n            </div>\n            <div class=\"icon-info\">\n              <h4>Emergency Services</h4>\n              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-md-4 col-sm-4\">\n          <div class=\"service-info\">\n            <div class=\"icon\">\n              <i class=\"fa fa-user-md\"></i>\n            </div>\n            <div class=\"icon-info\">\n              <h4>Medical Counseling</h4>\n              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n            </div>\n          </div>\n          <div class=\"service-info\">\n            <div class=\"icon\">\n              <i class=\"fa fa-medkit\"></i>\n            </div>\n            <div class=\"icon-info\">\n              <h4>Premium Healthcare</h4>\n              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  <!--/ service-->\n  <!--cta-->\n  <section id=\"cta-1\" class=\"section-padding\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"schedule-tab\">\n          <div class=\"col-md-4 col-sm-4 bor-left\">\n            <div class=\"mt-boxy-color\"></div>\n            <div class=\"medi-info\">\n              <h3>Emergency Case</h3>\n              <p>I am text block. Edit this text from Appearance / Customize / Homepage header columns. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>\n              <a href=\"#\" class=\"medi-info-btn\">READ MORE</a>\n            </div>\n          </div>\n          <div class=\"col-md-4 col-sm-4\">\n            <div class=\"medi-info\">\n              <h3>Emergency Case</h3>\n              <p>I am text block. Edit this text from Appearance / Customize / Homepage header columns. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>\n              <a href=\"#\" class=\"medi-info-btn\">READ MORE</a>\n            </div>\n          </div>\n          <div class=\"col-md-4 col-sm-4 mt-boxy-3\">\n            <div class=\"mt-boxy-color\"></div>\n            <div class=\"time-info\">\n              <h3>Opening Hours</h3>\n              <table style=\"margin: 8px 0px 0px;\" border=\"1\">\n                <tbody>\n                  <tr>\n                    <td>Monday - Friday</td>\n                    <td>8.00 - 17.00</td>\n                  </tr>\n                  <tr>\n                    <td>Saturday</td>\n                    <td>9.30 - 17.30</td>\n                  </tr>\n                  <tr>\n                    <td>Sunday</td>\n                    <td>9.30 - 15.00</td>\n                  </tr>\n                </tbody>\n              </table>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  <!--cta-->\n  <!--about-->\n  <section id=\"about\" class=\"section-padding\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-3 col-sm-4 col-xs-12\">\n          <div class=\"section-title\">\n            <h2 class=\"head-title lg-line\">The Medilap <br>Ultimate Dream</h2>\n            <hr class=\"botm-line\">\n            <p class=\"sec-para\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>\n            <a href=\"\" style=\"color: #0cb8b6; padding-top:10px;\">Know more..</a>\n          </div>\n        </div>\n        <div class=\"col-md-9 col-sm-8 col-xs-12\">\n          <div style=\"visibility: visible;\" class=\"col-sm-9 more-features-box\">\n            <div class=\"more-features-box-text\">\n              <div class=\"more-features-box-text-icon\"> <i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i> </div>\n              <div class=\"more-features-box-text-description\">\n                <h3>It's something important you want to know.</h3>\n                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.</p>\n              </div>\n            </div>\n            <div class=\"more-features-box-text\">\n              <div class=\"more-features-box-text-icon\"> <i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i> </div>\n              <div class=\"more-features-box-text-description\">\n                <h3>It's something important you want to know.</h3>\n                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.</p>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  <!--/ about-->\n  <!--doctor team-->\n  <section id=\"doctor-team\" class=\"section-padding\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <h2 class=\"ser-title\">Meet Our Doctors!</h2>\n          <hr class=\"botm-line\">\n        </div>\n        <div class=\"col-md-3 col-sm-3 col-xs-6\">\n          <div class=\"thumbnail\">\n            <img src=\"{% static 'primeExchange/img/doctor1.jpg' %}\" alt=\"...\" class=\"team-img\">\n            <div class=\"caption\">\n              <h3>Jessica Wally</h3>\n              <p>Doctor</p>\n              <ul class=\"list-inline\">\n                <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>\n                <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>\n                <li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li>\n              </ul>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-md-3 col-sm-3 col-xs-6\">\n          <div class=\"thumbnail\">\n            <img src=\"{% static 'primeExchange/img/doctor2.jpg' %}\" alt=\"...\" class=\"team-img\">\n            <div class=\"caption\">\n              <h3>Iai Donas</h3>\n              <p>Doctor</p>\n              <ul class=\"list-inline\">\n                <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>\n                <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>\n                <li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li>\n              </ul>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-md-3 col-sm-3 col-xs-6\">\n          <div class=\"thumbnail\">\n            <img src=\"{% static 'primeExchange/img/doctor3.jpg' %}\" alt=\"...\" class=\"team-img\">\n            <div class=\"caption\">\n              <h3>Amanda Denyl</h3>\n              <p>Doctor</p>\n              <ul class=\"list-inline\">\n                <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>\n                <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>\n                <li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li>\n              </ul>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-md-3 col-sm-3 col-xs-6\">\n          <div class=\"thumbnail\">\n            <img src=\"{% static 'primeExchange/img/doctor4.jpg' %}\" alt=\"...\" class=\"team-img\">\n            <div class=\"caption\">\n              <h3>Jason Davis</h3>\n              <p>Doctor</p>\n              <ul class=\"list-inline\">\n                <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>\n                <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>\n                <li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  <!--/ doctor team-->\n  <!--testimonial-->\n  <section id=\"testimonial\" class=\"section-padding\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <h2 class=\"ser-title\">see what patients are saying?</h2>\n          <hr class=\"botm-line\">\n        </div>\n        <div class=\"col-md-4 col-sm-4\">\n          <div class=\"testi-details\">\n            <!-- Paragraph -->\n            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n          </div>\n          <div class=\"testi-info\">\n            <!-- User Image -->\n            <a href=\"#\"><img src=\"{% static 'primeExchange/img/thumb.png' %}\" alt=\"\" class=\"img-responsive\"></a>\n            <!-- User Name -->\n            <h3>Alex<span>Texas</span></h3>\n          </div>\n        </div>\n        <div class=\"col-md-4 col-sm-4\">\n          <div class=\"testi-details\">\n            <!-- Paragraph -->\n            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n          </div>\n          <div class=\"testi-info\">\n            <!-- User Image -->\n            <a href=\"#\"><img src=\"{% static 'primeExchange/img/thumb.png' %}\" alt=\"\" class=\"img-responsive\"></a>\n            <!-- User Name -->\n            <h3>Alex<span>Texas</span></h3>\n          </div>\n        </div>\n        <div class=\"col-md-4 col-sm-4\">\n          <div class=\"testi-details\">\n            <!-- Paragraph -->\n            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n          </div>\n          <div class=\"testi-info\">\n            <!-- User Image -->\n            <a href=\"#\"><img src=\"{% static 'primeExchange/img/thumb.png' %}\" alt=\"\" class=\"img-responsive\"></a>\n            <!-- User Name -->\n            <h3>Alex<span>Texas</span></h3>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  <!--/ testimonial-->\n  <!--cta 2-->\n  <section id=\"cta-2\" class=\"section-padding\">\n    <div class=\"container\">\n      <div class=\" row\">\n        <div class=\"col-md-2\"></div>\n        <div class=\"text-right-md col-md-4 col-sm-4\">\n          <h2 class=\"section-title white lg-line\">« A few words<br> about us »</h2>\n        </div>\n        <div class=\"col-md-4 col-sm-5\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typek\n          <p class=\"text-right text-primary\"><i>— Medilap Healthcare</i></p>\n        </div>\n        <div class=\"col-md-2\"></div>\n      </div>\n    </div>\n  </section>\n  <!--cta-->\n  <!--contact-->\n  <section id=\"contact\" class=\"section-padding\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <h2 class=\"ser-title\">Contact us</h2>\n          <hr class=\"botm-line\">\n        </div>\n        <div class=\"col-md-4 col-sm-4\">\n          <h3>Contact Info</h3>\n          <div class=\"space\"></div>\n          <p><i class=\"fa fa-map-marker fa-fw pull-left fa-2x\"></i>321 Awesome Street<br> New York, NY 17022</p>\n          <div class=\"space\"></div>\n          <p><i class=\"fa fa-envelope-o fa-fw pull-left fa-2x\"></i>info@companyname.com</p>\n          <div class=\"space\"></div>\n          <p><i class=\"fa fa-phone fa-fw pull-left fa-2x\"></i>+1 800 123 1234</p>\n        </div>\n        <div class=\"col-md-8 col-sm-8 marb20\">\n          <div class=\"contact-info\">\n            <h3 class=\"cnt-ttl\">Having Any Query! Or Book an appointment</h3>\n            <div class=\"space\"></div>\n            <div id=\"sendmessage\">Your message has been sent. Thank you!</div>\n            <div id=\"errormessage\"></div>\n            <form action=\"\" method=\"post\" role=\"form\" class=\"contactForm\">\n              <div class=\"form-group\">\n                <input type=\"text\" name=\"name\" class=\"form-control br-radius-zero\" id=\"name\" placeholder=\"Your Name\" data-rule=\"minlen:4\" data-msg=\"Please enter at least 4 chars\" />\n                <div class=\"validation\"></div>\n              </div>\n              <div class=\"form-group\">\n                <input type=\"email\" class=\"form-control br-radius-zero\" name=\"email\" id=\"email\" placeholder=\"Your Email\" data-rule=\"email\" data-msg=\"Please enter a valid email\" />\n                <div class=\"validation\"></div>\n              </div>\n              <div class=\"form-group\">\n                <input type=\"text\" class=\"form-control br-radius-zero\" name=\"subject\" id=\"subject\" placeholder=\"Subject\" data-rule=\"minlen:4\" data-msg=\"Please enter at least 8 chars of subject\" />\n                <div class=\"validation\"></div>\n              </div>\n              <div class=\"form-group\">\n                <textarea class=\"form-control br-radius-zero\" name=\"message\" rows=\"5\" data-rule=\"required\" data-msg=\"Please write something for us\" placeholder=\"Message\"></textarea>\n                <div class=\"validation\"></div>\n              </div>\n\n              <div class=\"form-action\">\n                <button type=\"submit\" class=\"btn btn-form\">Send Message</button>\n              </div>\n            </form>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  <!--/ contact-->\n  <!--footer-->\n  <footer id=\"footer\">\n    <div class=\"top-footer\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-md-4 col-sm-4 marb20\">\n            <div class=\"ftr-tle\">\n              <h4 class=\"white no-padding\">About Us</h4>\n            </div>\n            <div class=\"info-sec\">\n              <p>Praesent convallis tortor et enim laoreet, vel consectetur purus latoque penatibus et dis parturient.</p>\n            </div>\n          </div>\n          <div class=\"col-md-4 col-sm-4 marb20\">\n            <div class=\"ftr-tle\">\n              <h4 class=\"white no-padding\">Quick Links</h4>\n            </div>\n            <div class=\"info-sec\">\n              <ul class=\"quick-info\">\n                <li><a href=\"index.html\"><i class=\"fa fa-circle\"></i>Home</a></li>\n                <li><a href=\"#service\"><i class=\"fa fa-circle\"></i>Service</a></li>\n                <li><a href=\"#contact\"><i class=\"fa fa-circle\"></i>Appointment</a></li>\n              </ul>\n            </div>\n          </div>\n          <div class=\"col-md-4 col-sm-4 marb20\">\n            <div class=\"ftr-tle\">\n              <h4 class=\"white no-padding\">Follow us</h4>\n            </div>\n            <div class=\"info-sec\">\n              <ul class=\"social-icon\">\n                <li class=\"bglight-blue\"><i class=\"fa fa-facebook\"></i></li>\n                <li class=\"bgred\"><i class=\"fa fa-google-plus\"></i></li>\n                <li class=\"bgdark-blue\"><i class=\"fa fa-linkedin\"></i></li>\n                <li class=\"bglight-blue\"><i class=\"fa fa-twitter\"></i></li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"footer-line\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-md-12 text-center\">\n            © Copyright Medilab Theme. All Rights Reserved\n            <div class=\"credits\">\n              <!--\n                All the links in the footer should remain intact.\n                You can delete the links only if you purchased the pro version.\n                Licensing information: https://bootstrapmade.com/license/\n                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Medilab\n              -->\n              Designed by <a href=\"https://bootstrapmade.com/\">BootstrapMade.com</a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </footer>\n  <!--/ footer-->\n\n  <script src=\"{% static 'primeExchange/js/jquery.min.js' %}\"></script>\n  <script src=\"{% static 'primeExchange/js/jquery.easing.min.js' %}\"></script>\n  <script src=\"{% static 'primeExchange/js/bootstrap.min.js' %}\"></script>\n  <script src=\"{% static 'primeExchange/js/custom.js' %}\"></script>\n  <script src=\"{% static 'primeExchange/contactform/contactform.js' %}\"></script>\n\n</body>\n\n</html>\n",
-			"file": "primeExchange/templates/primeExchange/base.html",
-			"file_size": 20053,
-			"file_write_time": 131539264965992724,
-			"settings":
-			{
-				"buffer_size": 20051,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "primeExchange/models.py",
-			"settings":
-			{
-				"buffer_size": 1130,
 				"line_ending": "Unix"
 			}
 		}
@@ -361,39 +302,31 @@
 	[
 		"/home/rajath/prime/src",
 		"/home/rajath/prime/src/prime",
-		"/home/rajath/prime/src/primeExchange",
-		"/home/rajath/prime/src/primeExchange/templates",
-		"/home/rajath/prime/src/primeExchange/templates/primeExchange"
+		"/home/rajath/prime/src/primeExchange"
 	],
 	"file_history":
 	[
-		"/home/rajath/prime/src/primeExchange/templates/Registrations/password_reset_done.html",
-		"/home/rajath/prime/src/primeExchange/templates/Registrations/logged_out.html",
-		"/home/rajath/prime/src/primeExchange/forms.py",
-		"/home/rajath/prime/src/prime/urls.py",
-		"/home/rajath/prime/src/primeExchange/templates/primeExchange/base.html",
-		"/home/rajath/my_env/mysite/blog/models.py",
-		"/home/rajath/prime/src/primeExchange/models.py",
-		"/home/rajath/prime/src/prime/settings.py",
-		"/home/rajath/prime/src/prime/email_info.py",
-		"/home/rajath/prime/src/primeExchange/views.py",
-		"/home/rajath/prime/src/primeExchange/templates/primeExchange/signup.html",
-		"/home/rajath/prime/src/prime.sublime-project",
 		"/home/rajath/prime/src/primeExchange/urls.py",
-		"/home/rajath/prime/src/primeExchange/templates/primeExchange/login.html",
+		"/home/rajath/prime/src/primeExchange/templates/primeExchange/base.html",
 		"/home/rajath/prime/src/primeExchange/templates/primeExchange/login_account.html",
 		"/home/rajath/prime/src/primeExchange/templates/primeExchange/prime_home.html",
 		"/home/rajath/prime/src/primeExchange/templates/primeExchange/create_account.html",
+		"/home/rajath/prime/src/primeExchange/forms.py",
+		"/home/rajath/prime/src/prime.sublime-project",
 		"/home/rajath/add/addressbook/abook/templates/abook/addstats.html",
+		"/home/rajath/prime/src/primeExchange/views.py",
 		"/home/rajath/add/addressbook/abook/models.py",
 		"/home/rajath/add/addressbook/abook/admin.py",
 		"/home/rajath/prime/src/primeExchange/template/primeExchange/prime_base.html",
 		"/home/rajath/prime/src/primeExchange/template/primeExchange/prime_home.html",
+		"/home/rajath/prime/src/prime/settings.py",
 		"/home/rajath/add/addressbook/abook/forms.py",
 		"/home/rajath/add/addressbook/abook/templates/abook/stats.html",
+		"/home/rajath/prime/src/prime/urls.py",
 		"/home/rajath/add/addressbook/abook/templates/abook/addplayer.html",
 		"/home/rajath/add/addressbook/abook/views.py",
 		"/home/rajath/add/addressbook/abook/templates/abook/index.html",
+		"/home/rajath/prime/src/primeExchange/models.py",
 		"/home/rajath/add/addressbook/abook/templates/abook/detail.html",
 		"/home/rajath/add/addressbook/abook/forms2.py",
 		"/home/rajath/add/addressbook/abook/tests.py",
@@ -418,12 +351,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"src",
-			"base",
-			"base/lo",
-			"img",
-			"class",
-			"UserForm",
 			"forms.py"
 		],
 		"highlight": true,
@@ -447,6 +374,178 @@
 			[
 				{
 					"buffer": 0,
+					"file": "primeExchange/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3180,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3058,
+								3058
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 504.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "primeExchange/templates/primeExchange/login.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 558,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								135,
+								135
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "primeExchange/urls.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 135,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "primeExchange/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1130,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								28,
+								28
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 72.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "primeExchange/templates/primeExchange/base.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5184.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "primeExchange/templates/primeExchange/signup.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 257,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								257,
+								257
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "prime/settings.py",
 					"semi_transient": false,
 					"settings":
@@ -469,205 +568,36 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2680.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "primeExchange/templates/Registrations/password_reset_complete.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 174,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								174,
-								174
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2448.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "primeExchange/templates/Registrations/login.html",
+					"buffer": 7,
+					"file": "primeExchange/forms.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 387,
+						"buffer_size": 1948,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "primeExchange/templates/primeExchange/login.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 541,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								541,
-								541
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "prime/urls.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1710,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1175,
-								1175
+								1043,
+								1043
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "primeExchange/templates/primeExchange/logout.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 119,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								67,
-								67
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "primeExchange/templates/primeExchange/signup.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 257,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								52,
-								52
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "primeExchange/views.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3363,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3305,
-								3305
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2016.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -675,11 +605,11 @@
 				},
 				{
 					"buffer": 8,
-					"file": "requirements.txt",
+					"file": "/home/rajath/acc/src/manage.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 199,
+						"buffer_size": 251,
 						"regions":
 						{
 						},
@@ -692,37 +622,35 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
 					"buffer": 9,
-					"file": "/home/rajath/Documents/Experiment/Medilab/index.html",
+					"file": "primeExchange/admin.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19457,
+						"buffer_size": 315,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								35,
-								35
+								187,
+								187
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -733,90 +661,32 @@
 				},
 				{
 					"buffer": 10,
-					"file": "/home/rajath/add/addressbook/abook/templates/abook/addstats.html",
+					"file": "prime/urls.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 438,
+						"buffer_size": 1605,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "primeExchange/templates/primeExchange/base.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 20051,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2506,
-								2506
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1008.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "primeExchange/models.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1130,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								853,
-								853
+								1142,
+								1142
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 251.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 9,
 					"type": "text"
 				}
 			]

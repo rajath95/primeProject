@@ -51,7 +51,7 @@ class SignupForm(forms.ModelForm) :
 	#userID is taken from email
 	#office_contact=fomrs
 	
-	captcha = CaptchaField()
+	#captcha = CaptchaField()
 	class Meta:
 		model=Profile
 		fields=('password','first_name','last_name','role','office_contact','mobile')

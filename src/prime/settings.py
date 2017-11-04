@@ -39,7 +39,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'primeExchange',
-    'captcha'
+    'captcha',
+    'django_extensions',
     
 )
 
@@ -119,3 +120,8 @@ DEFAULT_FROM_EMAIL = 'primeuser95@gmail.com'
 
 LOGIN_URL='/login'
 LOGIN_REDIRECT_URL='/base'
+
+
+AUTHENTICATION_BACKENDS = (
+        'django.contrib.auth.backends.ModelBackend',
+    )

@@ -1,16 +1,17 @@
-from django.shortcuts import render,redirect
-# Create your views here.
+from django.core.context_processors import csrf
+from django.http import HttpResponseRedirect
+from django.shortcuts import render,redirect,render_to_response
 from .models import Profile
 from .forms import SignupForm,LoginForm,UserForm
 from django.contrib.auth import login,authenticate,logout,get_user_model
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django import forms
 import json
+
 
 @api_view()
 def primeDataExchangeAPI(request):
@@ -27,46 +28,56 @@ def primeDataExchangeAPI(request):
 		api_response['DataExchangeStatus'] = 'SUCCESS'
 	return Response(api_response)
 
-@login_required
+
+
+
+
+#@login_required
 #@transaction.atomic
-def update_profile(request):
-    Profile.objects.get_or_create(user=request.user)
+def signup(request):
     if request.method == 'POST':
-        user_form = UserForm(request.POST, instance=request.user)
-        profile_form = SignupForm(request.POST, instance=request.user.profile)
-        z=""
-        
+        user_form = UserForm(request.POST)
+        profile_form = SignupForm(request.POST)
+               
         if user_form.is_valid() and profile_form.is_valid():
             	user_form.save()
-            	profile_form.save()	
-            	z= profile_form.cleaned_data['role']
-            	print(z)
-            	request.session['role']=z
-            #messages.success(request, ('Your profile was successfully updated!'))
-            	return render(request,'primeExchange/base.html',{'role':z})
-        else:
-        	pass
+            	username=user_form.cleaned_data.get('username')
+            	password=user_form.cleaned_data.get('password')
+            	user=authenticate(username=username,password=password)
+            	print(user)
+            	#login(request,user)
+            	return HttpResponseRedirect('/base')  
     else:
-        user_form = UserForm(instance=request.user)
-        profile_form = SignupForm(instance=request.user.profile)
-    return render(request, 'primeExchange/signup.html', {'user_form': user_form,
-        'profile_form': profile_form})
+        user_form = UserForm()
+        profile_form = SignupForm()
+    token = {}
+    token.update(csrf(request))
+    token['user_form'] = user_form
+    token['profile_form']=profile_form
+    return render_to_response('primeExchange/signup.html',token)
 
 
 def login_view(request):
+	token={}
+	token.update(csrf(request))
+	token['form']=LoginForm
+	return render_to_response('primeExchange/login.html',token)
 
-	form=LoginForm(request.POST or None)
-	if form.is_valid():
-			username=form.cleaned_data.get("username")
-			password=form.cleaned_data.get("password")
-			user=authenticate(username=username,password=password)
-			person=User.objects.get(username=username)
-			guy=Profile.objects.get(user=person)
-			print(guy.role)
-			request.session['role']=guy.role
-			login(request,user)
-			return render(request,'primeExchange/base.html',{'role':guy.role,'name':person.username})
-	return render(request,"primeExchange/login.html",{"form":form})
+
+def process_login(request):
+	username=request.POST.get('username','')
+	password=request.POST.get('password','')
+	user=authenticate(username=username,password=password)
+	print("username =",username)
+	print("password =",password)
+	print("auth= ",user)
+
+	if user is not None:
+		login(request,user)
+		return HttpResponseRedirect('/base')
+	else:
+		return HttpResponseRedirect('/login')
+
 
 
 def logout_view(request):
@@ -76,9 +87,9 @@ def logout_view(request):
 		if role=='Prime_Administrator':
 			print("hello")
 			return render(request,"primeExchange/signup.html",{})
-	print(role)
-	print(role)
-	print(role)
+	#print(role)
+	#print(role)
+	#print(role)
 	print("999")
 	#logout(request)
 	return render(request,"primeExchange/logout.html",{})
@@ -88,18 +99,12 @@ def logout_view(request):
 
 
 
-@login_required
+#@login_required
 def base(request):
-	
-
 	role="none"
 	if 'role' in request.session:
 		role=request.session['role']
 		print(role)
-
-
-
-
 	return render(request,"primeExchange/base.html",{'role':role})
 
 
