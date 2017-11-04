@@ -43,6 +43,7 @@ def signup(request):
             	user=user_form.save()
             	username=user_form.cleaned_data.get('username')
             	password=user_form.cleaned_data.get('password')
+            	user.set_password(password)
             	print(password)
             	guy=authenticate(username=username,password=user.password)
             	print(guy)
