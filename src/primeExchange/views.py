@@ -41,7 +41,6 @@ def signup(request):
                
         if user_form.is_valid() and profile_form.is_valid():
             	user=user_form.save()
-            	#login(request,user)
             	return HttpResponseRedirect('/base')  
     else:
         user_form = UserForm()
@@ -83,10 +82,7 @@ def logout_view(request):
 		if role=='Prime_Administrator':
 			print("hello")
 			return render(request,"primeExchange/signup.html",{})
-	#print(role)
-	#print(role)
-	#print(role)
-	print("999")
+	
 	#logout(request)
 	return render(request,"primeExchange/logout.html",{})
 	
@@ -95,7 +91,7 @@ def logout_view(request):
 
 
 
-#@login_required
+#@login_required(login_url='/login')
 def base(request):
 	role="none"
 	if 'role' in request.session:
