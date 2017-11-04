@@ -53,9 +53,7 @@ class UserForm(forms.ModelForm):
 		user.email = self.cleaned_data['email']
 		password=self.cleaned_data['password']
 		user.set_password(password)
-		print(user.email)
-		print("pas",user.password)
-
+		
 		if commit:
 			user.save()
             

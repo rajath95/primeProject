@@ -41,12 +41,6 @@ def signup(request):
                
         if user_form.is_valid() and profile_form.is_valid():
             	user=user_form.save()
-            	username=user_form.cleaned_data.get('username')
-            	password=user_form.cleaned_data.get('password')
-            	user.set_password(password)
-            	print(password)
-            	guy=authenticate(username=username,password=user.password)
-            	print(guy)
             	#login(request,user)
             	return HttpResponseRedirect('/base')  
     else:
