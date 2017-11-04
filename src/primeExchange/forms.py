@@ -10,7 +10,7 @@ class LoginForm(forms.Form):
 							   widget=forms.TextInput(attrs={'class': 'form-control', 'name': 'username'}))
 	password = forms.CharField(label="Password", max_length=30, 
 							   widget=forms.PasswordInput(attrs={'class': 'form-control', 'name': 'password'}))
-	def clean(self,*args,**kwargs):
+	def clean_confirm_email(self,*args,**kwargs):
 		username=self.cleaned_data.get("username")
 		password=self.cleaned_data.get("password")
 		
@@ -31,7 +31,9 @@ class UserForm(forms.ModelForm):
 	confirm_email=forms.EmailField(label="Confirm Email")
 	class Meta:
 		model=User
-		fields=('username','email','confirm_email')
+		fields=('username','email','confirm_email','password')
+		widgets = {
+		'password': forms.PasswordInput(),}
 
 	def clean(self):
 		cleaned_data=super(UserForm,self).clean()
@@ -42,6 +44,18 @@ class UserForm(forms.ModelForm):
 			raise forms.ValidationError("Email should be same")
 
 		return cleaned_data
+
+	def save(self, commit=True):
+		user = super(UserForm, self).save(commit=False)                                  
+        #user.first_name = self.cleaned_data['first_name']
+        #user.last_name = self.cleaned_data['last_name']
+
+		user.email = self.cleaned_data['email']
+		user.password=self.cleaned_data['password']
+		if commit:
+			user.save()
+            
+		return user
 
 
 class SignupForm(forms.ModelForm) :
@@ -54,9 +68,8 @@ class SignupForm(forms.ModelForm) :
 	#captcha = CaptchaField()
 	class Meta:
 		model=Profile
-		fields=('password','first_name','last_name','role','office_contact','mobile')
-		widgets = {
-		'password': forms.PasswordInput(),}
+		fields=('first_name','last_name','role','office_contact','mobile')
+		
 	
 	
 	
