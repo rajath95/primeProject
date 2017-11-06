@@ -107,14 +107,14 @@ def testimonial(request):
 
 @login_required()
 def reports(request):
-	return HttpResponseRedirect('/base#service')
+	return HttpResponseRedirect('/base#reports')
 
 @login_required()
 def analytics(request):
-	return HttpResponseRedirect('/base#cta-1')
+	return HttpResponseRedirect('/base#analytics')
 
 @login_required()
 def primeadmin(request):
-	return HttpResponseRedirect('/base#doctor-team')
+	return HttpResponseRedirect('/base#primeadmin')
 
 	
