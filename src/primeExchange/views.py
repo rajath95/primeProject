@@ -29,6 +29,13 @@ def primeDataExchangeAPI(request):
 	return Response(api_response)
 
 
+def create_session(form,request):
+	role=form.cleaned_data['role']
+	request.session['role']=role
+	return role
+
+
+
 
 
 
@@ -41,7 +48,9 @@ def signup(request):
                
         if user_form.is_valid() and profile_form.is_valid():
             	user=user_form.save()
-            	return HttpResponseRedirect('/base')  
+            	role=create_session(profile_form,request)
+            	print(role)
+            	return HttpResponseRedirect('/base',{'role':role})  
     else:
         user_form = UserForm()
         profile_form = SignupForm()
@@ -68,8 +77,11 @@ def process_login(request):
 	print("auth= ",user)
 
 	if user is not None:
-		login(request,user)
-		return HttpResponseRedirect('/base')
+		if user.is_active:
+			login(request,user)
+			return HttpResponseRedirect('/base')
+		else:
+			return HttpResponseRedirect('/login')
 	else:
 		return HttpResponseRedirect('/login')
 
