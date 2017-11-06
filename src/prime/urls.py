@@ -16,8 +16,8 @@ Including another URLconf
 from django.contrib.auth import views as auth_views
 from django.conf.urls import include, url
 from django.contrib import admin    
-from primeExchange.views import signup,login_view,logout_view,base,process_login
-
+from primeExchange.views import signup,login_view,logout_view,base,process_login,testimonial
+from primeExchange.views import reports,primeadmin,analytics
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^primeDataExchangeAPI/$', include('primeExchange.urls')), 
@@ -32,4 +32,12 @@ urlpatterns = [
     url(r'^reset/done/$', auth_views.password_reset_complete, name='password_reset_complete'),
     url(r'^captcha/', include('captcha.urls')),
     url(r'^base/$',base),
+    url(r'^testimonial/$',testimonial,name="testimonial"),
+    url(r'^reports/$',reports,name="reports"),
+    url(r'^analytics/$',analytics,name="analytics"),
+    url(r'^primeadmin/$',primeadmin,name="primeadmin"),
+
+    
+    
+
 ]

@@ -77,13 +77,14 @@ def process_login(request):
 
 def logout_view(request):
 	role="0"
+	logout(request)
 	if 'role' in request.session:
 		role=request.session['role']
 		if role=='Prime_Administrator':
 			print("hello")
 			return render(request,"primeExchange/signup.html",{})
 	
-	#logout(request)
+	
 	return render(request,"primeExchange/logout.html",{})
 	
 
@@ -91,7 +92,7 @@ def logout_view(request):
 
 
 
-#@login_required(login_url='/login')
+
 def base(request):
 	role="none"
 	if 'role' in request.session:
@@ -100,5 +101,20 @@ def base(request):
 	return render(request,"primeExchange/base.html",{'role':role})
 
 
+@login_required()
+def testimonial(request):
+	return HttpResponseRedirect('/base#testimonial')
 
+@login_required()
+def reports(request):
+	return HttpResponseRedirect('/base#service')
 
+@login_required()
+def analytics(request):
+	return HttpResponseRedirect('/base#cta-1')
+
+@login_required()
+def primeadmin(request):
+	return HttpResponseRedirect('/base#doctor-team')
+
+	
