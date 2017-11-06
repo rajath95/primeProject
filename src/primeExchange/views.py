@@ -117,4 +117,5 @@ def analytics(request):
 def primeadmin(request):
 	return HttpResponseRedirect('/base#primeadmin')
 
-	
+def contact(request):
+	return HttpResponseRedirect('/base#contact')
