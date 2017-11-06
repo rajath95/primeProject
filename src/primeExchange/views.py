@@ -29,12 +29,21 @@ def primeDataExchangeAPI(request):
 	return Response(api_response)
 
 
-def create_session(form,request):
-	role=form.cleaned_data['role']
+def create_session(pform,uform,request):
+	role=pform.cleaned_data['role']
+	name=uform.cleaned_data['username']
+	request.session['username']=name
 	request.session['role']=role
-	return role
+	return name,role,request.session
 
-
+def update_session(username,request):
+	user=User.objects.get(username=username)
+	user_profile=Profile.objects.get(user=user)
+	request.session['username']=user.username
+	request.session['role']=user_profile.role
+	username=user.username
+	role=user_profile.role
+	return username,role,request.session
 
 
 
@@ -48,9 +57,9 @@ def signup(request):
                
         if user_form.is_valid() and profile_form.is_valid():
             	user=user_form.save()
-            	role=create_session(profile_form,request)
-            	print(role)
-            	return HttpResponseRedirect('/base',{'role':role})  
+            	name,role,session=create_session(profile_form,user_form,request)
+            	print(name)
+            	return HttpResponseRedirect('/base',{'role':role,'name':name})  
     else:
         user_form = UserForm()
         profile_form = SignupForm()
@@ -72,14 +81,13 @@ def process_login(request):
 	username=request.POST.get('username','')
 	password=request.POST.get('password','')
 	user=authenticate(username=username,password=password)
-	print("username =",username)
-	print("password =",password)
-	print("auth= ",user)
+	
 
 	if user is not None:
 		if user.is_active:
 			login(request,user)
-			return HttpResponseRedirect('/base')
+			name,role,session=update_session(username,request)
+			return HttpResponseRedirect('/base',{'name':name,'role':role})
 		else:
 			return HttpResponseRedirect('/login')
 	else:
@@ -107,10 +115,12 @@ def logout_view(request):
 
 def base(request):
 	role="none"
+	name=""
 	if 'role' in request.session:
 		role=request.session['role']
+		name=request.session['username']
 		print(role)
-	return render(request,"primeExchange/base.html",{'role':role})
+	return render(request,"primeExchange/base.html",{'role':role,'name':name})
 
 
 @login_required()
