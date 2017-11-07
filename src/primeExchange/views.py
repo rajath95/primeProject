@@ -148,7 +148,7 @@ def clientaccess(request):
 def reports(request):
 	permission=retrieve_permission(request,module="reports")
 	if permission:
-		#messages.info(request,"You do not have permission to view reports")
+		pass
 	return HttpResponseRedirect('/base#reports')
 
 @login_required()
