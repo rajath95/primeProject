@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"use",
+				"user_profile"
+			],
+			[
+				"u",
+				"user"
+			],
+			[
+				"us",
+				"user_profile"
+			],
+			[
+				"user",
+				"user"
+			],
+			[
+				"up",
+				"update_session"
+			],
+			[
+				"pro",
+				"profile_form"
+			],
+			[
+				"cl",
+				"cleaned_data"
+			],
+			[
+				"pr",
+				"primeadmin"
+			],
+			[
+				"an",
+				"analytics"
+			],
+			[
+				"prim",
+				"primeadmin"
+			],
+			[
+				"ren",
+				"render"
+			],
+			[
 				"lo",
 				"login_required"
 			],
@@ -12,32 +56,16 @@
 				"request"
 			],
 			[
-				"us",
-				"username"
-			],
-			[
 				"a",
 				"authenticate"
-			],
-			[
-				"user",
-				"user_form"
 			],
 			[
 				"p",
 				"password"
 			],
 			[
-				"pro",
-				"process_login"
-			],
-			[
 				"rende",
 				"render_to_response"
-			],
-			[
-				"use",
-				"username"
 			],
 			[
 				"auth",
@@ -57,10 +85,6 @@
 			],
 			[
 				"prime",
-				"primeExchange"
-			],
-			[
-				"prim",
 				"primeExchange"
 			],
 			[
@@ -94,10 +118,6 @@
 			[
 				"fon",
 				"font-family"
-			],
-			[
-				"cl",
-				"clean_id"
 			],
 			[
 				"i",
@@ -183,16 +203,50 @@
 			"file": "primeExchange/views.py",
 			"settings":
 			{
-				"buffer_size": 2780,
+				"buffer_size": 3941,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "primeExchange/templates/Registrations/login.html",
+			"file": "primeExchange/urls.py",
 			"settings":
 			{
-				"buffer_size": 387,
+				"buffer_size": 135,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "primeExchange/forms.py",
+			"settings":
+			{
+				"buffer_size": 2392,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "prime/urls.py",
+			"settings":
+			{
+				"buffer_size": 1999,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "primeExchange/templates/primeExchange/base.html",
+			"settings":
+			{
+				"buffer_size": 21116,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/rajath/Desktop/notes",
+			"settings":
+			{
+				"buffer_size": 965,
 				"line_ending": "Unix"
 			}
 		},
@@ -213,60 +267,10 @@
 			}
 		},
 		{
-			"file": "primeExchange/templates/primeExchange/base.html",
-			"settings":
-			{
-				"buffer_size": 20155,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "primeExchange/templates/primeExchange/signup.html",
-			"settings":
-			{
-				"buffer_size": 275,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "prime/settings.py",
-			"settings":
-			{
-				"buffer_size": 3190,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "primeExchange/forms.py",
-			"settings":
-			{
-				"buffer_size": 2369,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/rajath/acc/src/manage.py",
-			"settings":
-			{
-				"buffer_size": 251,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "primeExchange/admin.py",
 			"settings":
 			{
 				"buffer_size": 315,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "prime/urls.py",
-			"settings":
-			{
-				"buffer_size": 1645,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -307,19 +311,21 @@
 		"/home/rajath/prime/src",
 		"/home/rajath/prime/src/prime",
 		"/home/rajath/prime/src/primeExchange",
-		"/home/rajath/prime/src/primeExchange/__pycache__",
-		"/home/rajath/prime/src/primeExchange/templates",
-		"/home/rajath/prime/src/primeExchange/templates/Registrations",
-		"/home/rajath/prime/src/primeExchange/templates/primeExchange"
+		"/home/rajath/prime/src/primeExchange/__pycache__"
 	],
 	"file_history":
 	[
-		"/home/rajath/prime/src/primeExchange/urls.py",
+		"/home/rajath/prime/src/primeExchange/forms.py",
+		"/home/rajath/Desktop/notes",
+		"/home/rajath/prime/src/primeExchange/templates/Registrations/login.html",
+		"/home/rajath/acc/src/manage.py",
+		"/home/rajath/prime/src/prime/settings.py",
 		"/home/rajath/prime/src/primeExchange/templates/primeExchange/base.html",
+		"/home/rajath/prime/src/primeExchange/templates/primeExchange/signup.html",
+		"/home/rajath/prime/src/primeExchange/urls.py",
 		"/home/rajath/prime/src/primeExchange/templates/primeExchange/login_account.html",
 		"/home/rajath/prime/src/primeExchange/templates/primeExchange/prime_home.html",
 		"/home/rajath/prime/src/primeExchange/templates/primeExchange/create_account.html",
-		"/home/rajath/prime/src/primeExchange/forms.py",
 		"/home/rajath/prime/src/prime.sublime-project",
 		"/home/rajath/add/addressbook/abook/templates/abook/addstats.html",
 		"/home/rajath/prime/src/primeExchange/views.py",
@@ -327,7 +333,6 @@
 		"/home/rajath/add/addressbook/abook/admin.py",
 		"/home/rajath/prime/src/primeExchange/template/primeExchange/prime_base.html",
 		"/home/rajath/prime/src/primeExchange/template/primeExchange/prime_home.html",
-		"/home/rajath/prime/src/prime/settings.py",
 		"/home/rajath/add/addressbook/abook/forms.py",
 		"/home/rajath/add/addressbook/abook/templates/abook/stats.html",
 		"/home/rajath/prime/src/prime/urls.py",
@@ -359,6 +364,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"session",
+			"service",
+			"octor-team",
+			"doctor-team",
+			"cta-1",
+			"service",
+			"section id",
+			"section",
+			"about",
 			"forms.py"
 		],
 		"highlight": true,
@@ -377,7 +391,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -386,15 +400,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2780,
+						"buffer_size": 3941,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2780,
-								2780
+								1946,
+								1946
 							]
 						],
 						"settings":
@@ -403,7 +417,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1008.0,
+						"translation.y": 576.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -411,11 +425,11 @@
 				},
 				{
 					"buffer": 1,
-					"file": "primeExchange/templates/Registrations/login.html",
-					"semi_transient": false,
+					"file": "primeExchange/urls.py",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 387,
+						"buffer_size": 135,
 						"regions":
 						{
 						},
@@ -428,17 +442,134 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "primeExchange/forms.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2392,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2009,
+								2009
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 36.0,
+						"translation.y": 936.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
+					"file": "prime/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1999,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1249,
+								1249
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 419.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "primeExchange/templates/primeExchange/base.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21116,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3979,
+								3979
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2133.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/rajath/Desktop/notes",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 965,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "primeExchange/templates/primeExchange/login.html",
 					"semi_transient": false,
 					"settings":
@@ -450,8 +581,8 @@
 						"selection":
 						[
 							[
-								2,
-								2
+								433,
+								411
 							]
 						],
 						"settings":
@@ -462,11 +593,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 7,
 					"file": "primeExchange/models.py",
 					"semi_transient": false,
 					"settings":
@@ -488,64 +619,6 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 144.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "primeExchange/templates/primeExchange/base.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 20155,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 936.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "primeExchange/templates/primeExchange/signup.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 275,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								257,
-								257
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -553,94 +626,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "prime/settings.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3190,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3076,
-								3076
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 952.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "primeExchange/forms.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2369,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 864.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
 					"buffer": 8,
-					"file": "/home/rajath/acc/src/manage.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 251,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
 					"file": "primeExchange/admin.py",
 					"semi_transient": false,
 					"settings":
@@ -652,8 +638,8 @@
 						"selection":
 						[
 							[
-								187,
-								187
+								284,
+								284
 							]
 						],
 						"settings":
@@ -662,36 +648,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "prime/urls.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1645,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1645,
-								1645
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 144.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,

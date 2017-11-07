@@ -10,6 +10,7 @@ from rest_framework.decorators import api_view
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django import forms
+from django.contrib import messages
 import json
 
 
@@ -45,6 +46,21 @@ def update_session(username,request):
 	role=user_profile.role
 	return username,role,request.session
 
+def retrieve_dict():
+	mapping={}
+	mapping["reports"]=["Hospital_Management","Prime_Administrator"]
+	mapping["analytics"]=["Hospital_Management","Prime_Administrator"]
+	#mapping[""]=["Hospital_Management","Prime_Administrator"]
+	#mapping["reports"]=["Hospital_Management","Prime_Administrator"]
+
+	return mapping
+
+def retrieve_permission(request,module):
+	mapping=retrieve_dict()
+	if request.session['role'] in mapping[module]:
+		return True
+	else:
+		return False
 
 
 
@@ -124,15 +140,21 @@ def base(request):
 
 
 @login_required()
-def testimonial(request):
-	return HttpResponseRedirect('/base#testimonial')
+def clientaccess(request):
+
+	return HttpResponseRedirect('/base#clientaccess')
 
 @login_required()
 def reports(request):
+	permission=retrieve_permission(request,module="reports")
+	if permission:
+		#messages.info(request,"You do not have permission to view reports")
 	return HttpResponseRedirect('/base#reports')
 
 @login_required()
 def analytics(request):
+	permission=retrieve_permission(request,module="analytics")
+
 	return HttpResponseRedirect('/base#analytics')
 
 @login_required()

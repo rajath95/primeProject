@@ -5,7 +5,3 @@ urlpatterns=[
 			url(r'^$', 'primeExchange.views.primeDataExchangeAPI'), 
 ]
 
-
-
-
-
