@@ -62,6 +62,15 @@ def retrieve_permission(request,module):
 	else:
 		return False
 
+def fill_admin_profile(user,pform,uform):
+	user.profile.role=pform.cleaned_data.get('role')
+	user.profile.username=uform.cleaned_data.get('username')
+	user.profile.first_name=pform.cleaned_data.get('first_name')
+	user.profile.last_name=pform.cleaned_data.get('last_name')
+	user.profile.email=uform.cleaned_data.get('email')
+	user.profile.mobile=pform.cleaned_data.get('mobile')
+	return user
+            	
 
 
 #@login_required
@@ -73,8 +82,9 @@ def signup(request):
                
         if user_form.is_valid() and profile_form.is_valid():
             	user=user_form.save()
+            	user=fill_admin_profile(user,profile_form,user_form)
+            	user.save()
             	name,role,session=create_session(profile_form,user_form,request)
-            	print(name)
             	return HttpResponseRedirect('/base',{'role':role,'name':name})  
     else:
         user_form = UserForm()
@@ -148,8 +158,9 @@ def clientaccess(request):
 def reports(request):
 	permission=retrieve_permission(request,module="reports")
 	if permission:
+		return HttpResponseRedirect('/base#reports')
+	else:
 		pass
-	return HttpResponseRedirect('/base#reports')
 
 @login_required()
 def analytics(request):

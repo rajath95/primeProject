@@ -5,7 +5,7 @@ from .forms import SignupForm
 
 class  ProfileAdmin(admin.ModelAdmin):
 
-	list_display=["username","first_name","last_name","email","role","mobile","office_contact"]
+	list_display=["username","first_name","last_name","email","role","mobile"]
 	form=SignupForm
 
 
