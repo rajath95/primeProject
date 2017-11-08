@@ -160,12 +160,18 @@ def reports(request):
 	if permission:
 		return HttpResponseRedirect('/base#reports')
 	else:
-		messages.info(request,"You do not have the permission")
+		messages.info(request,"You do not have permission")
 		return HttpResponseRedirect('/base')
 
 @login_required()
 def analytics(request):
 	permission=retrieve_permission(request,module="analytics")
+	if permission:
+		return HttpResponseRedirect('/base#analytics')
+	else:
+		messages.info(request,"You do not have permission")
+		return HttpResponseRedirect('/base')
+
 
 	return HttpResponseRedirect('/base#analytics')
 

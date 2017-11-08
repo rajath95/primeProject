@@ -28,7 +28,9 @@
     display: inline-block;
     background-color: white;
     color: black;
-    padding: 7.3px;
+    padding: 7.1px;
+    border-radius:3px;
+    font-size:15px;
 }
 
 .dropdown-content {
@@ -44,6 +46,14 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.info {
+  
+  color:pink;
+  font-weight:bold;
+
+}
+
 </style>
 </head>
 
@@ -109,6 +119,8 @@
         <div class="row">
           <div class="banner-info">
             <center>
+              <p class="text-info">
+
             {% if messages %}
                   <ul class="messages">
                     {% for message in messages %}
@@ -116,6 +128,7 @@
                     {% endfor %}
 </ul>
 {% endif %} 
+            </p>
           </center>
             <div class="banner-logo text-center">
 
