@@ -69,6 +69,7 @@ def fill_admin_profile(user,pform,uform):
 	user.profile.last_name=pform.cleaned_data.get('last_name')
 	user.profile.email=uform.cleaned_data.get('email')
 	user.profile.mobile=pform.cleaned_data.get('mobile')
+	user.save()
 	return user
             	
 
@@ -83,9 +84,8 @@ def signup(request):
         if user_form.is_valid() and profile_form.is_valid():
             	user=user_form.save()
             	user=fill_admin_profile(user,profile_form,user_form)
-            	user.save()
             	name,role,session=create_session(profile_form,user_form,request)
-            	return HttpResponseRedirect('/base',{'role':role,'name':name})  
+            	return HttpResponseRedirect('/login')  
     else:
         user_form = UserForm()
         profile_form = SignupForm()
@@ -160,7 +160,8 @@ def reports(request):
 	if permission:
 		return HttpResponseRedirect('/base#reports')
 	else:
-		pass
+		messages.info(request,"You do not have the permission")
+		return HttpResponseRedirect('/base')
 
 @login_required()
 def analytics(request):

@@ -36,11 +36,31 @@ h1, h2, h3, h4, h5, h6
 a, a:hover, a:focus, a:active{
     outline: none;
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
 .section-padding{
 	padding: 60px 0px;
 
 }
+
+
 h2 {
     line-height: 20px;
     margin: 0;
@@ -522,3 +542,4 @@ footer
         font-size: 24px;
     }
 }
+
