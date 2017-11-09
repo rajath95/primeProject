@@ -49,7 +49,9 @@ class UserForm(forms.ModelForm):
 		user = super(UserForm, self).save(commit=False)                                  
         #user.first_name = self.cleaned_data['first_name']
         #user.last_name = self.cleaned_data['last_name']
-
+        
+		#user.refresh_from_db()
+        
 		user.email = self.cleaned_data['email']
 		password=self.cleaned_data['password']
 		user.set_password(password)
@@ -71,7 +73,7 @@ class SignupForm(forms.ModelForm) :
 	#captcha = CaptchaField()
 	class Meta:
 		model=Profile
-		fields=('first_name','last_name','role','office_contact','mobile')
+		fields=('first_name','last_name','role','office_contact','mobile','date')
 		
 	
 	

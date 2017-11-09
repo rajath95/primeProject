@@ -69,6 +69,7 @@ def fill_admin_profile(user,pform,uform):
 	user.profile.last_name=pform.cleaned_data.get('last_name')
 	user.profile.email=uform.cleaned_data.get('email')
 	user.profile.mobile=pform.cleaned_data.get('mobile')
+	user.profile.date=pform.cleaned_data.get('date')
 	user.save()
 	return user
             	

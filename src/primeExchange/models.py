@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+import datetime
+
 # Create your models here.
 
 
@@ -18,6 +20,7 @@ class Profile(models.Model):
 	username=models.CharField(max_length=10)
 	password = models.CharField(max_length=50)
 	email=models.EmailField(max_length=30)
+	date = models.DateField(("Date"), default=datetime.date.today)
 	role=models.CharField(default="Prime_Administrator",choices=ROLES,max_length=30)
 	mobile= models.CharField(max_length=10)
 	office_contact=models.CharField(max_length=10)
