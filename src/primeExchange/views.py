@@ -159,7 +159,7 @@ def clientaccess(request):
 def reports(request):
 	permission=retrieve_permission(request,module="reports")
 	if permission:
-		return HttpResponseRedirect('/base#reports')
+		return HttpResponseRedirect('/base/reports')
 	else:
 		messages.info(request,"You do not have permission")
 		return HttpResponseRedirect('/base')
@@ -182,3 +182,7 @@ def primeadmin(request):
 
 def contact(request):
 	return HttpResponseRedirect('/base#contact')
+
+
+def xreport(request):
+	return render(request,"primeExchange/xreport.html")

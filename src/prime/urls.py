@@ -17,7 +17,7 @@ from django.contrib.auth import views as auth_views
 from django.conf.urls import include, url
 from django.contrib import admin    
 from primeExchange.views import signup,login_view,logout_view,base,process_login,clientaccess
-from primeExchange.views import reports,primeadmin,analytics,contact
+from primeExchange.views import reports,primeadmin,analytics,contact,xreport
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^primeDataExchangeAPI/$', include('primeExchange.urls')), 
@@ -37,6 +37,7 @@ urlpatterns = [
     url(r'^analytics/$',analytics,name="analytics"),
     url(r'^primeadmin/$',primeadmin,name="primeadmin"),
     url(r'^contact/$',contact,name="contact"),
+    url(r'^base/reports/$',xreport),
 
     
     

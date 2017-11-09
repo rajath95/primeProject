@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'primeExchange',
     'captcha',
     'django_extensions',
+    'django_tables2',
     
 )
 
