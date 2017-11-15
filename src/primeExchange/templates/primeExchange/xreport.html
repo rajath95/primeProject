@@ -7,7 +7,32 @@
 
 	<title> Reports </title>
 	<style type="text/css">
+
+  .topcorner{
+
+   position:absolute;
+   top:0;
+   right:0;
+  }
+
+  .topleftcorner{
+
+   position:absolute;
+   top:0;
+   left:0;
+  }
+
+  .middle{
+    position:absolute;
+    top:40%;
+    left:40%;
+
+
+  }
+
   .dropdown {
+    top:200;
+    left:0%;
     position: relative;
     display: inline-block;
     background-color: white;
@@ -20,21 +45,58 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: black;
-    color:white;
+    background-color: white;
+    color:black;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
 }
 
-.highlight:hover{
-  color: yellow;
-  background-color: orange;
-}
-
+  
 .dropdown:hover .dropdown-content {
     display: block;
+
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  background-color: white;
+  color: blue;
+}
+
+#table_a {
+
+border-style: solid;
+border-color: black;
+border-width: 8px;
+border-radius: 8px;
+border-spacing:0px;
+text-align: center;
+background-color: silver;
+color: purple;
+width: 400px;
+transition: background 0.2s ease-in;
+height: 50px;
+
+
+}
+
+#table_a tr:nth-child(odd) {
+
+    background: white;
+    width: 150px;
+    height: 50px;
+}
+
+#table_a tr:nth-child(even) {
+
+    background: silver;
+    width: 150px;
+    height: 50px;
 }
 
 .info {
@@ -55,54 +117,61 @@
   <link rel="stylesheet" type="text/css" href="{% static 'primeExchange/css/style.css' %}">
 </style>
 
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
-
 </head>
 <body>
-	
-                  <div class="dropdown">
+
+<div class="topcorner">
+  LOGO 2
+</div>
+
+<div class="topleftcorner">
+  LOGO 1
+</div>
+
+
+<div class="middle">          
+
+<table id='table_a'>
+  <tr>
+    <th>  COMMODITY </th>
+    <th>  PRICE </th>
+  </tr>
+
+  {% for item in items %}
+  <tr>
+    <td> {{ item.commodity }} </td>
+    <td> {{ item.price }} </td>
+  </tr>
+   {% endfor %}
+
+</table>
+
+<p style="color:brown; font-size: 18px; position: relative; left: 40%;"> Total  {{ total }}  </p>
+</div>
+
+
+ <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">Choose Month </button>
                    
                    <div class="dropdown-content">
-                    <p span class="highlight"> January </p>
-                    <p span class="highlight"> February </p>
-                    <p span class="highlight"> March </p>
-                    <p span class="highlight"> April </p>
-                    <p span class="highlight"> <a href="../../filter/?month=11" style="color:white;text-decoration: none;">June </a></p>
-                    <p span class="highlight"> July </p>
-                    <p span class="highlight"> August </p>
-                    <p span class="highlight"> September </p>
-                    <p span class="highlight"> October </p>
-                    <p span class="highlight"> November </p>
-                    <p span class="highlight"> December </p>
+                    <p span class="highlight"> <a href="../../filter/?month=1"> January </a></p>
+                    <p span class="highlight"> <a href="../../filter/?month=2"> February </a> </p>
+                    <p span class="highlight"> <a href="../../filter/?month=3"> March </a></p>
+                    <p span class="highlight"> <a href="../../filter/?month=4"> April </a></p>
+                     <p span class="highlight"> <a href="../../filter/?month=5"> May </a></p>
+                                 
+                    <p span class="highlight"> <a href="../../filter/?month=6">June </a></p>
+                    <p span class="highlight"> <a href="../../filter/?month=7"> July </a></p>
+                    <p span class="highlight"> <a href="../../filter/?month=8"> August </a></p>
+                    <p span class="highlight"> <a href="../../filter/?month=9"> September </p></a>
+                    <p span class="highlight"> <a href="../../filter/?month=10"> October </a></p>
+                    <p span class="highlight"> <a href="../../filter/?month=11"> November </a> </p>
+                    <p span class="highlight"> <a href="../../filter/?month=12"> December </a></p>
                     
                     </div>
             </div>
-<table>
-<tr> {{ user.username }}            
-  
-    
+
+
 
 </body>
 </html>

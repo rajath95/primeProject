@@ -1,7 +1,7 @@
 from django.core.context_processors import csrf
 from django.http import HttpResponseRedirect
 from django.shortcuts import render,redirect,render_to_response
-from .models import Profile
+from .models import Profile,Commodities
 from .forms import SignupForm,LoginForm,UserForm
 from django.contrib.auth import login,authenticate,logout,get_user_model
 from django.contrib.auth.models import User
@@ -190,15 +190,25 @@ def xreport(request):
 	return render(request,"primeExchange/xreport.html")
 
 def monthly(request):
-	users=User.objects.all()
+	commodity_list=Commodities.objects.all()
 	m=1
+	z=0
+	obj_list=[]
+	total=0
 	if request.method=='GET':
 		m=int(request.GET.get('month'))
 	print(m)
-	for user in users:
-	    month=Profile.objects.get(user=user).date.month
+	for item in commodity_list:
+	    month=Commodities.objects.get(commodity=item).date.month
 	    print(type(month))
-	    if month==m:   
-	            return render(request,"primeExchange/xreport.html",{'user':user})
-	    else:
-	    		return HttpResponseRedirect('/base#contact')
+	    if month==m:
+	    		z=1
+	    		total+=item.price
+	    		obj_list.append(item)
+	if z:
+		return render(request,"primeExchange/xreport.html",{'items':obj_list,'total':total})
+	else:
+		return render(request,"primeExchange/xreport.html")
+
+	    
+	    		
