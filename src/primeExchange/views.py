@@ -184,5 +184,21 @@ def contact(request):
 	return HttpResponseRedirect('/base#contact')
 
 
+
 def xreport(request):
+	
 	return render(request,"primeExchange/xreport.html")
+
+def monthly(request):
+	users=User.objects.all()
+	m=1
+	if request.method=='GET':
+		m=int(request.GET.get('month'))
+	print(m)
+	for user in users:
+	    month=Profile.objects.get(user=user).date.month
+	    print(type(month))
+	    if month==m:   
+	            return render(request,"primeExchange/xreport.html",{'user':user})
+	    else:
+	    		return HttpResponseRedirect('/base#contact')

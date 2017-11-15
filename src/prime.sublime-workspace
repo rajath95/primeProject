@@ -4,12 +4,52 @@
 		"selected_items":
 		[
 			[
-				"use",
-				"user_profile"
+				"p",
+				"people"
 			],
 			[
 				"u",
-				"user"
+				"username"
+			],
+			[
+				"pe",
+				"person"
+			],
+			[
+				"use",
+				"username"
+			],
+			[
+				"dec",
+				"text-decoration"
+			],
+			[
+				"pr",
+				"primeExchange"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"s",
+				"size"
+			],
+			[
+				"a",
+				"analytics"
+			],
+			[
+				"mod",
+				"module"
+			],
+			[
+				"ret",
+				"retrieve_permission"
 			],
 			[
 				"us",
@@ -32,10 +72,6 @@
 				"cleaned_data"
 			],
 			[
-				"pr",
-				"primeadmin"
-			],
-			[
 				"an",
 				"analytics"
 			],
@@ -50,18 +86,6 @@
 			[
 				"lo",
 				"login_required"
-			],
-			[
-				"re",
-				"request"
-			],
-			[
-				"a",
-				"authenticate"
-			],
-			[
-				"p",
-				"password"
 			],
 			[
 				"rende",
@@ -104,10 +128,6 @@
 				"text-decoration"
 			],
 			[
-				"s",
-				"style\tAttr"
-			],
-			[
 				"_",
 				"__str__"
 			],
@@ -142,10 +162,6 @@
 			[
 				"st",
 				"style\tTag"
-			],
-			[
-				"fo",
-				"forms"
 			],
 			[
 				"foin",
@@ -203,16 +219,17 @@
 			"file": "primeExchange/views.py",
 			"settings":
 			{
-				"buffer_size": 3941,
+				"buffer_size": 5501,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "primeExchange/urls.py",
+			"file": "primeExchange/templates/primeExchange/xreport.html",
 			"settings":
 			{
-				"buffer_size": 135,
+				"buffer_size": 2039,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -220,15 +237,16 @@
 			"file": "primeExchange/forms.py",
 			"settings":
 			{
-				"buffer_size": 2392,
+				"buffer_size": 2442,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "prime/urls.py",
+			"file": "prime/settings.py",
 			"settings":
 			{
-				"buffer_size": 1999,
+				"buffer_size": 3212,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -237,24 +255,17 @@
 			"file": "primeExchange/templates/primeExchange/base.html",
 			"settings":
 			{
-				"buffer_size": 21116,
+				"buffer_size": 22399,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/rajath/Desktop/notes",
+			"file": "prime/urls.py",
 			"settings":
 			{
-				"buffer_size": 965,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "primeExchange/templates/primeExchange/login.html",
-			"settings":
-			{
-				"buffer_size": 572,
+				"buffer_size": 2048,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -262,7 +273,7 @@
 			"file": "primeExchange/models.py",
 			"settings":
 			{
-				"buffer_size": 1135,
+				"buffer_size": 1216,
 				"line_ending": "Unix"
 			}
 		},
@@ -270,7 +281,7 @@
 			"file": "primeExchange/admin.py",
 			"settings":
 			{
-				"buffer_size": 315,
+				"buffer_size": 305,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -309,41 +320,47 @@
 	"expanded_folders":
 	[
 		"/home/rajath/prime/src",
-		"/home/rajath/prime/src/prime",
 		"/home/rajath/prime/src/primeExchange",
-		"/home/rajath/prime/src/primeExchange/__pycache__"
+		"/home/rajath/prime/src/primeExchange/__pycache__",
+		"/home/rajath/prime/src/primeExchange/static",
+		"/home/rajath/prime/src/primeExchange/static/primeExchange",
+		"/home/rajath/prime/src/primeExchange/static/primeExchange/css",
+		"/home/rajath/prime/src/primeExchange/templates",
+		"/home/rajath/prime/src/primeExchange/templates/primeExchange"
 	],
 	"file_history":
 	[
-		"/home/rajath/prime/src/primeExchange/forms.py",
+		"/home/rajath/prime/src/primeExchange/models.py",
+		"/home/rajath/prime/src/primeExchange/static/primeExchange/css/style.css",
+		"/home/rajath/prime/src/primeExchange/templates/primeExchange/login.html",
 		"/home/rajath/Desktop/notes",
+		"/home/rajath/add/addressbook/abook/views.py",
+		"/home/rajath/prime/src/prime/urls.py",
+		"/home/rajath/add/addressbook/abook/models.py",
+		"/home/rajath/add/addressbook/abook/urls.py",
+		"/home/rajath/prime/src/primeExchange/urls.py",
+		"/home/rajath/prime/src/primeExchange/forms.py",
 		"/home/rajath/prime/src/primeExchange/templates/Registrations/login.html",
 		"/home/rajath/acc/src/manage.py",
 		"/home/rajath/prime/src/prime/settings.py",
 		"/home/rajath/prime/src/primeExchange/templates/primeExchange/base.html",
 		"/home/rajath/prime/src/primeExchange/templates/primeExchange/signup.html",
-		"/home/rajath/prime/src/primeExchange/urls.py",
 		"/home/rajath/prime/src/primeExchange/templates/primeExchange/login_account.html",
 		"/home/rajath/prime/src/primeExchange/templates/primeExchange/prime_home.html",
 		"/home/rajath/prime/src/primeExchange/templates/primeExchange/create_account.html",
 		"/home/rajath/prime/src/prime.sublime-project",
 		"/home/rajath/add/addressbook/abook/templates/abook/addstats.html",
 		"/home/rajath/prime/src/primeExchange/views.py",
-		"/home/rajath/add/addressbook/abook/models.py",
 		"/home/rajath/add/addressbook/abook/admin.py",
 		"/home/rajath/prime/src/primeExchange/template/primeExchange/prime_base.html",
 		"/home/rajath/prime/src/primeExchange/template/primeExchange/prime_home.html",
 		"/home/rajath/add/addressbook/abook/forms.py",
 		"/home/rajath/add/addressbook/abook/templates/abook/stats.html",
-		"/home/rajath/prime/src/prime/urls.py",
 		"/home/rajath/add/addressbook/abook/templates/abook/addplayer.html",
-		"/home/rajath/add/addressbook/abook/views.py",
 		"/home/rajath/add/addressbook/abook/templates/abook/index.html",
-		"/home/rajath/prime/src/primeExchange/models.py",
 		"/home/rajath/add/addressbook/abook/templates/abook/detail.html",
 		"/home/rajath/add/addressbook/abook/forms2.py",
 		"/home/rajath/add/addressbook/abook/tests.py",
-		"/home/rajath/add/addressbook/abook/urls.py",
 		"/home/rajath/add/addressbook/abook/templates/abook/newpage.html",
 		"/home/rajath/add/addressbook/addressbook/urls.py",
 		"/home/rajath/add/addressbook/addressbook/settings.py"
@@ -364,6 +381,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"testim",
 			"session",
 			"service",
 			"octor-team",
@@ -391,7 +409,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -400,15 +418,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3941,
+						"buffer_size": 5501,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1946,
-								1946
+								5424,
+								5424
 							]
 						],
 						"settings":
@@ -417,32 +435,32 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 576.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "primeExchange/urls.py",
-					"semi_transient": true,
+					"file": "primeExchange/templates/primeExchange/xreport.html",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 135,
+						"buffer_size": 2039,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1970,
+								1970
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -457,15 +475,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2392,
+						"buffer_size": 2442,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2009,
-								2009
+								520,
+								520
 							]
 						],
 						"settings":
@@ -473,28 +491,28 @@
 							"syntax": "Packages/Python/Python.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 36.0,
-						"translation.y": 936.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "prime/urls.py",
+					"file": "prime/settings.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1999,
+						"buffer_size": 3212,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1249,
-								1249
+								1168,
+								1168
 							]
 						],
 						"settings":
@@ -504,10 +522,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 419.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -516,15 +534,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 21116,
+						"buffer_size": 22399,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3979,
-								3979
+								526,
+								526
 							]
 						],
 						"settings":
@@ -534,75 +552,49 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2133.0,
+						"translation.y": 1728.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "/home/rajath/Desktop/notes",
+					"file": "prime/urls.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 965,
+						"buffer_size": 2048,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								915,
+								915
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 299.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "primeExchange/templates/primeExchange/login.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 572,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								433,
-								411
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
 					"file": "primeExchange/models.py",
-					"semi_transient": false,
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1135,
+						"buffer_size": 1216,
 						"regions":
 						{
 						},
@@ -619,27 +611,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1033.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "primeExchange/admin.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 315,
+						"buffer_size": 305,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								284,
-								284
+								241,
+								241
 							]
 						],
 						"settings":
@@ -650,7 +642,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]

@@ -1,8 +1,108 @@
+{% load render_table from django_tables2 %}
+
+
 <html>
+
 <head> 
+
 	<title> Reports </title>
+	<style type="text/css">
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 7.1px;
+    border-radius:3px;
+    font-size:17px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    color:white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.highlight:hover{
+  color: yellow;
+  background-color: orange;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.info {
+  
+  color:pink;
+  font-weight:bold;
+
+}
+
+.p {
+	color:white;
+}
+
+{% load staticfiles %}
+
+ <link rel="stylesheet" type="text/css" href="{% static 'primeExchange/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'primeExchange/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'primeExchange/css/style.css' %}">
+</style>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 
 </head>
 <body>
-	Hi
+	
+                  <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Choose Month </button>
+                   
+                   <div class="dropdown-content">
+                    <p span class="highlight"> January </p>
+                    <p span class="highlight"> February </p>
+                    <p span class="highlight"> March </p>
+                    <p span class="highlight"> April </p>
+                    <p span class="highlight"> <a href="../../filter/?month=11" style="color:white;text-decoration: none;">June </a></p>
+                    <p span class="highlight"> July </p>
+                    <p span class="highlight"> August </p>
+                    <p span class="highlight"> September </p>
+                    <p span class="highlight"> October </p>
+                    <p span class="highlight"> November </p>
+                    <p span class="highlight"> December </p>
+                    
+                    </div>
+            </div>
+<table>
+<tr> {{ user.username }}            
+  
+    
+
 </body>
+</html>
