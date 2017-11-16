@@ -1,7 +1,7 @@
 from django.core.context_processors import csrf
 from django.http import HttpResponseRedirect
 from django.shortcuts import render,redirect,render_to_response
-from .models import Profile,Commodities
+from .models import Profile,Commodities,RawBillingRecord,BadBillingRecord
 from .forms import SignupForm,LoginForm,UserForm
 from django.contrib.auth import login,authenticate,logout,get_user_model
 from django.contrib.auth.models import User
@@ -210,5 +210,8 @@ def monthly(request):
 	else:
 		return render(request,"primeExchange/xreport.html")
 
-	    
+
+def tables(request):
+	records=BadBillingRecord.objects.all()
+	return render(request,"primeExchange/table.html",{"tables":records})	    
 	    		

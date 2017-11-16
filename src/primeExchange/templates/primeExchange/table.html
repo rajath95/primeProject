@@ -1,0 +1,18 @@
+<html>
+<head>
+	TABLES
+</head>
+<body>
+	<table>
+	<tr>
+		<th> RecordID </th>
+		<th> ClientID </th>
+	</tr>
+	 {% for item in tables %}
+  <tr>
+    <td> {{ item.RecordID }} </td>
+    <td> {{ item.ClientID }} </td>
+  </tr>
+   {% endfor %}
+</table>
+</body>

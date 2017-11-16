@@ -1,14 +1,27 @@
+<html>
 
+<head> Login </head>
+<title> login </title>
+	<style>
+
+
+</style>
+
+
+<body>
+
+{% load staticfiles %}
 
 <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
       rel="stylesheet">
-
+ <link rel="stylesheet" href="{% static 'primeExchange/css/blog.css' %}">
 
 {% block title %}Log-in{% endblock %}
 {% block content %}
 <h1>Log-in</h1>
 <br />
 <p>Please, use the following form to log-in:</p>
+
 <form action="/process_login/" method="post">
 {% csrf_token %}
 {{ form.as_p }}

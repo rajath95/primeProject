@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Profile,Commodities
+from .models import Profile,Commodities,RawBillingRecord,BadBillingRecord
 from .forms import SignupForm
 # Register your models here.
 
@@ -17,3 +17,19 @@ class CommodityAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Commodities,CommodityAdmin)
+
+class RawBillingRecordAdmin(admin.ModelAdmin):
+	list_display = RawBillingRecord._meta.get_all_field_names()
+
+admin.site.register(RawBillingRecord,RawBillingRecordAdmin)
+
+class BadBillingRecordAdmin(admin.ModelAdmin):
+	list_display = BadBillingRecord._meta.get_all_field_names()
+	
+admin.site.register(BadBillingRecord,BadBillingRecordAdmin)
+
+
+
+
+
+#class RawBillingRecordAdmin(admin.ModelAdmin):
