@@ -23,11 +23,6 @@ class RawBillingRecordAdmin(admin.ModelAdmin):
 
 admin.site.register(RawBillingRecord,RawBillingRecordAdmin)
 
-class BadBillingRecordAdmin(admin.ModelAdmin):
-	list_display = BadBillingRecord._meta.get_all_field_names()
-	
-admin.site.register(BadBillingRecord,BadBillingRecordAdmin)
-
 
 
 

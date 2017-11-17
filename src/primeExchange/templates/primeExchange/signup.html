@@ -8,6 +8,7 @@
 			top:10%;
 			left:40%;
 			position: absolute;
+
 		}
 
 
@@ -20,10 +21,13 @@
 		.form-class
 		{
 
-			border: 5px solid darkblue;
+			border: 5px solid silver;	
 			border-radius: 3px;
 			width: 120%;
 			height:40px;
+			color: orange;
+
+			
 			
 		
 			
@@ -68,7 +72,7 @@
     	
     		<label for="{{ field.id_for_label }}" class="field_label"> {{ field.label }} </label>
     	<div class="form-class">
-    	{{ field |add_class:'form-control' }}
+    	{{ field| add_class:'form-control'  }}
     </div>
     	<br >
     	

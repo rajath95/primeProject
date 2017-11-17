@@ -28,7 +28,7 @@ class LoginForm(forms.Form):
 class UserForm(forms.ModelForm):
 	
 	
-	confirm_email=forms.EmailField(label="Confirm Email",widget=forms.TextInput(attrs={'class' : 'form-class'}))
+	confirm_email=forms.EmailField(label="Confirm Email",widget=forms.TextInput())
 	class Meta:
 		model=User
 		fields=('username','email','confirm_email','password')
