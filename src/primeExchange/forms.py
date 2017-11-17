@@ -7,9 +7,9 @@ from captcha.fields import CaptchaField
 
 class LoginForm(forms.Form):
 	username = forms.CharField(label="Username", max_length=30, 
-							   widget=forms.TextInput(attrs={'class': 'form-control', 'name': 'username'}))
+							   widget=forms.TextInput(attrs={'class': 'form-control1', 'name': 'Username'}))
 	password = forms.CharField(label="Password", max_length=30, 
-							   widget=forms.PasswordInput(attrs={'class': 'form-control', 'name': 'password'}))
+							   widget=forms.PasswordInput(attrs={'class': 'form-control1', 'name': 'password'}))
 	def clean_confirm_email(self,*args,**kwargs):
 		username=self.cleaned_data.get("username")
 		password=self.cleaned_data.get("password")
@@ -28,12 +28,15 @@ class LoginForm(forms.Form):
 class UserForm(forms.ModelForm):
 	
 	
-	confirm_email=forms.EmailField(label="Confirm Email")
+	confirm_email=forms.EmailField(label="Confirm Email",widget=forms.TextInput(attrs={'class' : 'form-class'}))
 	class Meta:
 		model=User
 		fields=('username','email','confirm_email','password')
 		widgets = {
-		'password': forms.PasswordInput(),}
+		'password': forms.PasswordInput(),
+		
+		}
+		
 
 	def clean(self):
 		cleaned_data=super(UserForm,self).clean()
@@ -75,6 +78,5 @@ class SignupForm(forms.ModelForm) :
 		model=Profile
 		fields=('first_name','last_name','role','office_contact','mobile','date')
 		
-	
 	
 	

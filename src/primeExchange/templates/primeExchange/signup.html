@@ -1,11 +1,90 @@
+<html>
+<head>
+	<title> Signup </title>
+	<style type="text/css">
+		
+		.form2
+		{
+			top:10%;
+			left:40%;
+			position: absolute;
+		}
+
+
+		.field_label
+		{
+			color: #FFFF00;
+			font-style: serif;
+		}
+
+		.form-class
+		{
+
+			border: 5px solid darkblue;
+			border-radius: 3px;
+			width: 120%;
+			height:40px;
+			
+		
+			
+		}
+		.body{
+			background-color: grey;
+		
+		}
+
+	</style>
+</head>
+<body class="body">
+
+{% load staticfiles %}
+
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
+
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+  <link rel="stylesheet" type="text/css" href="{% static 'primeExchange/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'primeExchange/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'primeExchange/css/style.css' %}">
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
+      rel="stylesheet">
+ 
+
+ <a class="navbar-brand" href="#"><img src="{% static 'primeExchange/img/logo.png' %}" class="img-responsive" style="width: 140px; margin-top: -16px;"></a>
 {% block content %}
-  <h2>Sign up</h2>
-  <form method="post" action="/signup/">
+<div class="banner-text text-center">
+<h1 class="white">Signup</h1>
+<br />
+</div>
+ 
+ {% load widget_tweaks %}
+
+
+  
+  <form method="post" action="/signup/" class="form2">
     {% csrf_token %}
-    {{ user_form.as_p }}
-    {{ profile_form.as_p }}
+    {% for field in user_form.visible_fields %}
+    	
+    		<label for="{{ field.id_for_label }}" class="field_label"> {{ field.label }} </label>
+    	<div class="form-class">
+    	{{ field |add_class:'form-control' }}
+    </div>
+    	<br >
+    	
+
+	{% endfor %}    
+    {% for field in profile_form.visible_fields %}
+    	
+    		<label for="{{ field.id_for_label }}" class="field_label"> {{ field.label }} </label>
+    <div class="form-class">
+    		{{ field |add_class:'form-control' }}
+    	</div>
+    {% endfor %}
+    <br />
     <button type="submit">Sign up</button>
   </form>
 {% endblock %}
+
+
+</body>
