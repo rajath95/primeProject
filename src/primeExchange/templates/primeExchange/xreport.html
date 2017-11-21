@@ -3,9 +3,11 @@
 
 <html>
 
-<head> 
+<head>
 
 	<title> Reports </title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 	<style type="text/css">
 
   .topcorner{
@@ -53,7 +55,7 @@
     z-index: 1;
 }
 
-  
+
 .dropdown:hover .dropdown-content {
     display: block;
 
@@ -71,36 +73,42 @@ a:hover {
 #table_a {
 
 border-style: solid;
-border-color: black;
-border-width: 8px;
-border-radius: 8px;
-border-spacing:0px;
+border-color: purple;
+border-width: 10px;
+border-radius: 25px;
+border-spacing: 05px;
 text-align: center;
-background-color: silver;
-color: purple;
-width: 400px;
+background-color: black;
+color: #FFFF00;
+width: 600px;
 transition: background 0.2s ease-in;
-height: 50px;
+height: 80px;
 
 
 }
 
 #table_a tr:nth-child(odd) {
 
-    background: white;
+    background: black;
     width: 150px;
     height: 50px;
 }
 
 #table_a tr:nth-child(even) {
 
-    background: silver;
+    background:black;
     width: 150px;
     height: 50px;
 }
 
+#table_r{
+	color:silver;
+	text-align: center;
+	font-family: Courier New;
+}
+
 .info {
-  
+
   color:pink;
   font-weight:bold;
 
@@ -121,8 +129,8 @@ height: 50px;
   function change(id)
   {
     document.getElementById(id).value="Save";
-    
-    
+
+
   }
 
 </script>
@@ -139,13 +147,14 @@ height: 50px;
 </div>
 
 
-<div class="middle">          
+<div class="middle">
 
 <table id='table_a'>
-  <tr>
-    <th>  COMMODITY </th>
-    <th>  PRICE </th>
-    <th> DATE </th>
+  <tr id="table_r">
+    <th id="table_r">  COMMODITY </th>
+    <th id="table_r">  PRICE </th>
+    <th id="table_r"> DATE </th>
+		<th id="table_r"> OPTIONS </th>
   </tr>
 
   {% for item in items %}
@@ -153,7 +162,21 @@ height: 50px;
     <td> {{ item.commodity }} </td>
     <td> {{ item.price }} </td>
     <td> {{ item.date }} </td>
+    <td style="width:150 px">
+      <button type=" button"  class="btn btn-warning btn-sm js-update-book">
+        <span class="glyphicon glyphicon-pencil"></span> Edit
+      </button>
+       <button type="button"
+              class="btn btn-danger btn-sm js-delete-book"
+              >
+        <span class="glyphicon glyphicon-trash"></span> Delete
+      </button>
+
+
+
+
   </tr>
+
 
    {% endfor %}
 
@@ -172,14 +195,14 @@ height: 50px;
 
  <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">Choose Month </button>
-                   
+
                    <div class="dropdown-content">
                     <p span class="highlight"> <a href="../../filter/?month=1"> January </a></p>
                     <p span class="highlight"> <a href="../../filter/?month=2"> February </a> </p>
                     <p span class="highlight"> <a href="../../filter/?month=3"> March </a></p>
                     <p span class="highlight"> <a href="../../filter/?month=4"> April </a></p>
                      <p span class="highlight"> <a href="../../filter/?month=5"> May </a></p>
-                                 
+
                     <p span class="highlight"> <a href="../../filter/?month=6">June </a></p>
                     <p span class="highlight"> <a href="../../filter/?month=7"> July </a></p>
                     <p span class="highlight"> <a href="../../filter/?month=8"> August </a></p>
@@ -187,7 +210,7 @@ height: 50px;
                     <p span class="highlight"> <a href="../../filter/?month=10"> October </a></p>
                     <p span class="highlight"> <a href="../../filter/?month=11"> November </a> </p>
                     <p span class="highlight"> <a href="../../filter/?month=12"> December </a></p>
-                    
+
                     </div>
             </div>
 

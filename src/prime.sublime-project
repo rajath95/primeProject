@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"path": "/home/rajath/simple-ajax-crud-master"
 		}
 	]
 }
