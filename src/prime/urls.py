@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib.auth import views as auth_views
 from django.conf.urls import include, url
-from django.contrib import admin    
+from django.contrib import admin
 from primeExchange.views import signup,login_view,logout_view,base,process_login,clientaccess
 from primeExchange.views import reports,primeadmin,analytics,contact,xreport,monthly,tables
+from primeExchange.views import delete_row,edit_row
+
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^primeDataExchangeAPI/$', include('primeExchange.urls')), 
+    url(r'^primeDataExchangeAPI/$', include('primeExchange.urls')),
     url(r'^signup/$',signup),
     url(r'^process_login',process_login),
     url(r'^login/$',login_view,name="login"),
@@ -39,9 +41,11 @@ urlpatterns = [
     url(r'^contact/$',contact,name="contact"),
     url(r'^base/reports/$',xreport),
     url(r'^filter/$',monthly),
-    url(r'^tables/$',tables)
+    url(r'^tables/$',tables),
+    url(r'^delete_row/(?P<id>[A-z]+)/$',delete_row),
+    #url(r'^edit_row/(?P<id>[A-z]+)/$',edit_row),
 
-    
-    
+
+
 
 ]

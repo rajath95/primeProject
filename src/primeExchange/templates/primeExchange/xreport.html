@@ -162,22 +162,21 @@ height: 80px;
     <td> {{ item.commodity }} </td>
     <td> {{ item.price }} </td>
     <td> {{ item.date }} </td>
-    <td style="width:150 px">
-      <button type=" button"  class="btn btn-warning btn-sm js-update-book">
+    <td style="width:200 px">
+			<div>
+				<div class="col-sm-5">
+      <button type=" button"  class="btn btn-warning btn-sm js-update-book" >
         <span class="glyphicon glyphicon-pencil"></span> Edit
-      </button>
-       <button type="button"
-              class="btn btn-danger btn-sm js-delete-book"
-              >
-        <span class="glyphicon glyphicon-trash"></span> Delete
-      </button>
+      </button></div>
 
-
-
-
-  </tr>
-
-
+			<div class="col-sm-2">
+			<form action="/delete_row/{{ item.commodity }}/">
+       <button type="submit" class="btn btn-danger btn-sm js-delete-book" value="delete">
+				 <span class="glyphicon glyphicon-trash"></span> Delete
+			 </button></div>
+      	</form>
+			</td>
+		 </tr>
    {% endfor %}
 
 </table>

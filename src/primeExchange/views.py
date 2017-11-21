@@ -1,6 +1,6 @@
 from django.core.context_processors import csrf
 from django.http import HttpResponseRedirect
-from django.shortcuts import render,redirect,render_to_response
+from django.shortcuts import render,redirect,render_to_response,get_object_or_404
 from .models import Profile,Commodities,RawBillingRecord,BadBillingRecord
 from .forms import SignupForm,LoginForm,UserForm
 from django.contrib.auth import login,authenticate,logout,get_user_model
@@ -72,7 +72,7 @@ def fill_admin_profile(user,pform,uform):
 	user.profile.date=pform.cleaned_data.get('date')
 	user.save()
 	return user
-            	
+
 
 
 #@login_required
@@ -81,12 +81,12 @@ def signup(request):
     if request.method == 'POST':
         user_form = UserForm(request.POST)
         profile_form = SignupForm(request.POST)
-               
+
         if user_form.is_valid() and profile_form.is_valid():
             	user=user_form.save()
             	user=fill_admin_profile(user,profile_form,user_form)
             	name,role,session=create_session(profile_form,user_form,request)
-            	return HttpResponseRedirect('/login')  
+            	return HttpResponseRedirect('/login')
     else:
         user_form = UserForm()
         profile_form = SignupForm()
@@ -108,7 +108,7 @@ def process_login(request):
 	username=request.POST.get('username','')
 	password=request.POST.get('password','')
 	user=authenticate(username=username,password=password)
-	
+
 
 	if user is not None:
 		if user.is_active:
@@ -130,10 +130,10 @@ def logout_view(request):
 		if role=='Prime_Administrator':
 			print("hello")
 			return render(request,"primeExchange/signup.html",{})
-	
-	
+
+
 	return render(request,"primeExchange/logout.html",{})
-	
+
 
 
 
@@ -186,7 +186,7 @@ def contact(request):
 
 
 def xreport(request):
-	
+
 	return render(request,"primeExchange/xreport.html")
 
 def monthly(request):
@@ -213,5 +213,14 @@ def monthly(request):
 
 def tables(request):
 	records=BadBillingRecord.objects.all()
-	return render(request,"primeExchange/table.html",{"tables":records})	    
-	    		
+	return render(request,"primeExchange/table.html",{"tables":records})
+
+def delete_row(request,id):
+	row=get_object_or_404(Commodities,commodity=id)
+	data=dict()
+	if request.method == 'POST':
+		row.delete()
+		return HttpResponseRedirect("/base/")
+	else:
+		row.delete()
+		return HttpResponseRedirect("/base/")
