@@ -241,12 +241,14 @@ def new_row(request):
 def edit_row(request,id):
 	com=get_object_or_404(Commodities,commodity=id)
 	if request.method == 'POST':
+		com.delete()
 		form=CommoditiesForm(request.POST)
 		if form.is_valid():
 			com=form.save()
 			return HttpResponseRedirect('/reports/')
 	else:
 		com_form=CommoditiesForm(instance=com)
+		com.delete()
 	token={}
 	token.update(csrf(request))
 	token["form"]=com_form

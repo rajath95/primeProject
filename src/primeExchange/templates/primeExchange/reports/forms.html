@@ -22,7 +22,7 @@
 <br />
 
 {% load widget_tweaks %}
-<form action="/new_row/" method="post" class="form-classer">
+<form action="/new_row/" method="POST" class="form-classer">
   {% csrf_token %}
 {% for field in form %}
   <div class="form-group{% if field.errors %} has-error{% endif %}">
