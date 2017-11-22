@@ -237,3 +237,17 @@ def new_row(request):
 	token.update(csrf(request))
 	token['form']=form
 	return render_to_response('primeExchange/reports/forms.html',token)
+
+def edit_row(request,id):
+	com=get_object_or_404(Commodities,commodity=id)
+	if request.method == 'POST':
+		form=CommoditiesForm(request.POST)
+		if form.is_valid():
+			com=form.save()
+			return HttpResponseRedirect('/reports/')
+	else:
+		com_form=CommoditiesForm(instance=com)
+	token={}
+	token.update(csrf(request))
+	token["form"]=com_form
+	return render_to_response('primeExchange/reports/forms.html',token)
