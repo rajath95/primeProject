@@ -2,7 +2,7 @@ from django.core.context_processors import csrf
 from django.http import HttpResponseRedirect
 from django.shortcuts import render,redirect,render_to_response,get_object_or_404
 from .models import Profile,Commodities,RawBillingRecord,BadBillingRecord
-from .forms import SignupForm,LoginForm,UserForm
+from .forms import SignupForm,LoginForm,UserForm,CommoditiesForm
 from django.contrib.auth import login,authenticate,logout,get_user_model
 from django.contrib.auth.models import User
 from rest_framework.response import Response
@@ -224,3 +224,16 @@ def delete_row(request,id):
 	else:
 		row.delete()
 		return HttpResponseRedirect("/base/")
+
+def new_row(request):
+	if request.method == 'POST':
+		form=CommoditiesForm(request.POST)
+		if form.is_valid():
+			com=form.save()
+			return HttpResponseRedirect('/reports/')
+	else:
+		form=CommoditiesForm()
+	token={}
+	token.update(csrf(request))
+	token['form']=form
+	return render_to_response('primeExchange/reports/forms.html',token)

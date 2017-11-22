@@ -171,6 +171,7 @@ height: 80px;
 
 			<div class="col-sm-2">
 			<form action="/delete_row/{{ item.commodity }}/" method="post">
+				{% csrf_token %}
        <button type="submit" class="btn btn-danger btn-sm js-delete-book" value="delete">
 				 <span class="glyphicon glyphicon-trash"></span> Delete
 			 </button></div>
