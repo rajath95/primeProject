@@ -1,0 +1,47 @@
+<p>
+	<div>
+	<button type="button" class="btn btn-primary js-create-book" onclick="document.getElementById('id01').style.display='block'">
+		<span class="glyphicon glyphicon-plus"></span>
+		New book
+	</button>
+	</div>
+	</p>
+
+
+<div class="w3-container">
+	<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+        <h2> Form </h2>
+      </header>
+      <div class="w3-container">
+				{% load widget_tweaks %}
+				{% include "primeExchange/reports/forms.html" %}
+				<div class="modal-footer">
+			    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			    <button type="submit" class="btn btn-primary">Create book</button>
+			  </div>
+			</form>
+
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+
+var modal= document.getElementById('id01');
+
+// when user clicks it disappears
+window.onclick=function(event){
+	if (event.target==modal){
+		modal.style.display= "none";
+	}
+}
+
+
+</script>
+</body>
+
+</html>

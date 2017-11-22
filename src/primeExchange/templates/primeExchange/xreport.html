@@ -170,7 +170,7 @@ height: 80px;
       </button></div>
 
 			<div class="col-sm-2">
-			<form action="/delete_row/{{ item.commodity }}/">
+			<form action="/delete_row/{{ item.commodity }}/" method="post">
        <button type="submit" class="btn btn-danger btn-sm js-delete-book" value="delete">
 				 <span class="glyphicon glyphicon-trash"></span> Delete
 			 </button></div>
@@ -183,10 +183,9 @@ height: 80px;
 <br/>
 <br/>
 
-<input onclick="change(id)" type="button" value="insert" id="button1" />
-<input onclick="change(id)" type="button" value="update" id="button2" />
-<input onclick="change(id)" type="button" value="delete" id="button3" />
-
+<button type="button" class="btn btn-primary" onclick="location.href=/new_row/">
+	<span class="glyphicon glyphicon-plus"> </span> New Row
+</button>
 
 <p style="color:brown; font-size: 18px; position: relative; left: 40%;"> Total  {{ total }}  </p>
 </div>

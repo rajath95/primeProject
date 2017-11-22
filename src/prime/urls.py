@@ -18,7 +18,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from primeExchange.views import signup,login_view,logout_view,base,process_login,clientaccess
 from primeExchange.views import reports,primeadmin,analytics,contact,xreport,monthly,tables
-from primeExchange.views import delete_row,edit_row
+from primeExchange.views import delete_row
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
