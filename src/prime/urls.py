@@ -42,8 +42,8 @@ urlpatterns = [
     url(r'^base/reports/$',xreport),
     url(r'^filter/$',monthly),
     url(r'^tables/$',tables),
-    url(r'^delete_row/(?P<id>[A-z]+)/$',delete_row),
-    url(r'^edit_row/(?P<id>[A-z]+)/$',edit_row),
+    url(r'^delete_row/(?P<id>[A-z0-9_]+)/$',delete_row),
+    url(r'^edit_row/(?P<id>[A-z0-9_]+)/$',edit_row),
     url(r'^new_row/$',new_row),
 
 

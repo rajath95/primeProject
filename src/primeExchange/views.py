@@ -248,8 +248,9 @@ def edit_row(request,id):
 			return HttpResponseRedirect('/reports/')
 	else:
 		com_form=CommoditiesForm(instance=com)
-		com.delete()
+
 	token={}
 	token.update(csrf(request))
 	token["form"]=com_form
-	return render_to_response('primeExchange/reports/forms.html',token)
+	token["item"]=com
+	return render_to_response('primeExchange/reports/edit_forms.html',token)
