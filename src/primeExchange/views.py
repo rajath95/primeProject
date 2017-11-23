@@ -1,7 +1,7 @@
 from django.core.context_processors import csrf
 from django.http import HttpResponseRedirect
 from django.shortcuts import render,redirect,render_to_response,get_object_or_404
-from .models import Profile,Commodities
+from .models import Profile,Commodities,doctorMaster,SMSlookup
 from .forms import SignupForm,LoginForm,UserForm,CommoditiesForm
 from django.contrib.auth import login,authenticate,logout,get_user_model
 from django.contrib.auth.models import User
@@ -254,3 +254,12 @@ def edit_row(request,id):
 	token["form"]=com_form
 	token["item"]=com
 	return render_to_response('primeExchange/reports/edit_forms.html',token)
+
+def dreports(request):
+
+	doc=doctorMaster.objects.all()
+	sms=SMSlookup.objects.all()
+	token={}
+	token["doc_obj"]=doc
+	token["sms_obj"]=sms
+	return render_to_response("primeExchange/reports/dreports.html",token)

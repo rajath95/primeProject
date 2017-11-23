@@ -1,0 +1,104 @@
+{% load render_table from django_tables2 %}
+
+<html>
+
+<head>
+	<title> PRIME REPORTS </title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style type="text/css">
+
+	.left{
+		position: absolute;
+		top:20%;
+		left:5%;
+	}
+
+.right{
+	position: absolute;
+	top:20%;
+	left:60%;
+}
+
+	#table_a {
+	border-style: solid;
+	border-color: purple;
+	border-width: 10px;
+	border-radius: 25px;
+	border-spacing: 15px;
+	line-height: 44px;
+	text-align: center;
+	background-color: black;
+	color: #FFFF00;
+	width: 600px;
+	transition: background 0.2s ease-in;
+	height: 100px;
+	}
+
+	#table_r{
+		color:silver;
+		text-align: center;
+		font-family: Courier New;
+	}
+
+</style>
+</head>
+
+<body>
+	doctorID
+	doctorName
+	doctorDesignation
+	doctorSpecialization
+	UpdatedOn
+
+
+
+<div class="left">
+	<table id='table_a'>
+	  <tr id="table_r">
+	    <th id="table_r"> Doctor ID  </th>
+	    <th id="table_r"> Name </th>
+	    <th id="table_r"> Designation </th>
+			<th id="table_r"> Specialization </th>
+			<th id="table_r"> Updated On </th>
+	  </tr>
+
+
+		{% for item in doc_obj %}
+	  <tr>
+	    <td> {{ item.doctorID }} </td>
+	    <td> {{ item.doctorName }} </td>
+	    <td> {{ item.doctorDesignation }} </td>
+			<td> {{ item.doctorSpecialization }} </td>
+			<td> {{ item.UpdatedOn }} </td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+
+
+
+<div class="right">
+	<table id='table_a'>
+		<tr id="table_r">
+			<th id="table_r"> Doctor ID </th>
+			<th id="table_r"> Record  ID  </th>
+			<th id="table_r"> Name </th>
+			<th id="table_r"> Mobile Contact </th>
+			<th id="table_r"> Updated On </th>
+		</tr>
+
+		{% for item in sms_obj  %}
+
+		<tr>
+				<td> {{ item.doctor.doctorID }} </td>
+			<td> {{ item.recordID }} </td>
+			<td> {{ item.doctorName }} </td>
+			<td> {{ item.SMSContact }} </td>
+			<td> {{ item.UpdatedOn }} </td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+
+</body>
+</html>
