@@ -10,13 +10,13 @@
 	.left{
 		position: absolute;
 		top:20%;
-		left:5%;
+		left:30%;
 	}
 
 .right{
 	position: absolute;
-	top:20%;
-	left:60%;
+	top:60%;
+	left:30%;
 }
 
 	#table_a {
@@ -29,7 +29,7 @@
 	text-align: center;
 	background-color: black;
 	color: #FFFF00;
-	width: 600px;
+	width: 800px;
 	transition: background 0.2s ease-in;
 	height: 100px;
 	}
@@ -55,11 +55,12 @@
 <div class="left">
 	<table id='table_a'>
 	  <tr id="table_r">
-	    <th id="table_r"> Doctor ID  </th>
+	    <th id="table_r"> Doctor ID </th>
 	    <th id="table_r"> Name </th>
 	    <th id="table_r"> Designation </th>
 			<th id="table_r"> Specialization </th>
 			<th id="table_r"> Updated On </th>
+			<th id="table_r"> Options </th>
 	  </tr>
 
 
@@ -70,6 +71,21 @@
 	    <td> {{ item.doctorDesignation }} </td>
 			<td> {{ item.doctorSpecialization }} </td>
 			<td> {{ item.UpdatedOn }} </td>
+			<td style="width:200 px">
+				<div>
+					<div class="col-sm-5">
+	      <button type=" button"  class="btn btn-warning btn-sm js-update-book" onclick="location.href='/edit_row/{{ item.commodity }}/'" >
+	        <span class="glyphicon glyphicon-pencil"></span> Edit
+	      </button></div>
+
+				<div class="col-sm-2">
+				<form action="/delete_row/{{ item.commodity }}/" method="post">
+					{% csrf_token %}
+	       <button type="submit" class="btn btn-danger btn-sm js-delete-book" value="delete">
+					 <span class="glyphicon glyphicon-trash"></span> Delete
+				 </button></div>
+	      	</form>
+				</td>
 		</tr>
 		{% endfor %}
 	</table>
@@ -85,6 +101,7 @@
 			<th id="table_r"> Name </th>
 			<th id="table_r"> Mobile Contact </th>
 			<th id="table_r"> Updated On </th>
+			<th id="table_r"> Options </th>
 		</tr>
 
 		{% for item in sms_obj  %}
@@ -95,6 +112,21 @@
 			<td> {{ item.doctorName }} </td>
 			<td> {{ item.SMSContact }} </td>
 			<td> {{ item.UpdatedOn }} </td>
+			<td style="width:200 px">
+				<div>
+					<div class="col-sm-5">
+	      <button type=" button"  class="btn btn-warning btn-sm js-update-book" onclick="location.href='/edit_row/{{ item.commodity }}/'" >
+	        <span class="glyphicon glyphicon-pencil"></span> Edit
+	      </button></div>
+
+				<div class="col-sm-2">
+				<form action="/delete_row/{{ item.commodity }}/" method="post">
+					{% csrf_token %}
+	       <button type="submit" class="btn btn-danger btn-sm js-delete-book" value="delete">
+					 <span class="glyphicon glyphicon-trash"></span> Delete
+				 </button></div>
+	      	</form>
+				</td>
 		</tr>
 		{% endfor %}
 	</table>
