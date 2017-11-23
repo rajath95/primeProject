@@ -57,14 +57,15 @@ class Commodities(models.Model):
 		return self.commodity
 
 class doctorMaster(models.Model):
+
 	doctorID = models.AutoField(primary_key=True)
 	doctorName = models.CharField(max_length=100,null=False)
 	doctorDesignation = models.CharField(max_length=100,null=True)
 	doctorSpecialization = models.CharField(max_length=100,null=True)
 	UpdatedOn = models.DateTimeField(default=timezone.now, null=True)
 
-	def __str__(self):
-		return self.doctorID
+	def __unicode__(self):
+		return str(self.doctorID)
 
 class serviceCodeMaster(models.Model):
 
@@ -73,12 +74,16 @@ class serviceCodeMaster(models.Model):
 	serviceName = models.CharField(max_length=500,null=True)
 	serviceCodeCategory = models.CharField(max_length=100,null=True)
 	UpdatedOn = models.DateTimeField(default=timezone.now, null=True)
-	def __str__(self):
-		return self.recordID
+
+	def __unicode__(self):
+		return str(self.recordID)
 
 class SMSlookup(models.Model):
-    recordID = models.AutoField(primary_key=True)
-    doctorID = models.IntegerField (null = False)
-    doctorName = models.CharField(max_length=100,null=False)
-    SMSContact = models.IntegerField (null = False)
-    UpdatedOn = models.DateTimeField(default=timezone.now, null=True)
+	recordID = models.AutoField(primary_key=True)
+	doctor = models.ForeignKey(doctorMaster,to_field='doctorID',on_delete=models.CASCADE)
+	doctorName = models.CharField(max_length=100,null=False)
+	SMSContact = models.IntegerField (null = False)
+	UpdatedOn = models.DateTimeField(default=timezone.now, null=True)
+
+	def __unicode__(self):
+		return str(self.doctorID)
