@@ -10,7 +10,9 @@ from rest_framework.decorators import api_view
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django import forms
+from django.template import RequestContext
 from django.contrib import messages
+from django.views.decorators.csrf import csrf_protect
 import json
 
 
@@ -263,3 +265,62 @@ def dreports(request):
 	token["doc_obj"]=doc
 	token["sms_obj"]=sms
 	return render_to_response("primeExchange/reports/dreports.html",token)
+
+
+def delete_drow1(request,id):
+	row=get_object_or_404(doctorMaster,doctorID=id)
+	data=dict()
+	if request.method == 'POST':
+		row.delete()
+		return HttpResponseRedirect("/dreports/")
+	else:
+		return HttpResponseRedirect("/dreports/")
+
+
+def delete_drow2(request,id):
+	row=get_object_or_404(SMSlookup,recordID=id)
+	data=dict()
+	if request.method == 'POST':
+		row.delete()
+		return HttpResponseRedirect("/dreports/")
+	else:
+		row.delete()
+		return HttpResponseRedirect("/dreports/")
+
+"""
+
+def edit_drow1(request,id):
+	com=get_object_or_404(doctorMaster,doctorID=id)
+	if request.method == 'POST':
+		com.delete()
+		form=DoctorForm(request.POST)
+		if form.is_valid():
+			com=form.save()
+			return HttpResponseRedirect('/dreports/')
+	else:
+		com_form=DoctorForm(instance=com)
+
+	token={}
+	token.update(csrf(request))
+	token["form"]=com_form
+	token["item"]=com
+	return render_to_response('primeExchange/reports/edit_dforms1.html',token)
+
+def edit_drow2(request,id):
+	com=get_object_or_404(SMSlookup,recordID=id)
+	if request.method == 'POST':
+		com.delete()
+		form=SMSForm(request.POST)
+		if form.is_valid():
+			com=form.save()
+			return HttpResponseRedirect('/dreports/')
+	else:
+		com_form=SMSForm(instance=com)
+
+	token={}
+	token.update(csrf(request))
+	token["form"]=com_form
+	token["item"]=com
+	return render_to_response('primeExchange/reports/edit_dforms2.html',token)
+
+"""

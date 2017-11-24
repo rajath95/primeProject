@@ -43,7 +43,7 @@
 	text-align: center;
 	background-color: black;
 	color: #FFFF00;
-	width: 800px;
+	width: 950px;
 	transition: background 0.2s ease-in;
 	height: 100px;
 	}
@@ -92,9 +92,13 @@
 	        <span class="glyphicon glyphicon-pencil"></span> Edit
 	      </button></div>
 
+
+	<div>
 				<div class="col-sm-2">
-				<form action="/delete_row/{{ item.commodity }}/" method="post">
+				<form action="/delete_drow1/{{ item.doctorID }}/" method="post">
 					{% csrf_token %}
+					<input type='hidden' name='csrfmiddlewaretoken' value='NOIyl2mdEwuIeb7k3SAWkXMiF0AZwnfx' />
+
 	       <button type="submit" class="btn btn-danger btn-sm js-delete-book" value="delete">
 					 <span class="glyphicon glyphicon-trash"></span> Delete
 				 </button></div>
@@ -104,6 +108,8 @@
 		{% endfor %}
 	</table>
 </div>
+
+
 
 <div class="first">
 <button type="button" class="btn btn-primary" onclick="location.href=/new_row/">
@@ -136,12 +142,13 @@
 			<td style="width:200 px">
 				<div>
 					<div class="col-sm-5">
-	      <button type=" button"  class="btn btn-warning btn-sm js-update-book" onclick="location.href='/edit_row/{{ item.commodity }}/'" >
+	      <button type=" button"  class="btn btn-warning btn-sm js-update-book" onclick="location.href='/edit_drow/{{ item.doctor.doctorID }}/'" >
 	        <span class="glyphicon glyphicon-pencil"></span> Edit
 	      </button></div>
 
 				<div class="col-sm-2">
-				<form action="/delete_row/{{ item.commodity }}/" method="post">
+				<form action="/delete_drow2/{{ item.recordID }}/" method="post">
+					<input type='hidden' name='csrfmiddlewaretoken' value='NOIyl2mdEwuIeb7k3SAWkXMiF0AZwnfx' />
 					{% csrf_token %}
 	       <button type="submit" class="btn btn-danger btn-sm js-delete-book" value="delete">
 					 <span class="glyphicon glyphicon-trash"></span> Delete
