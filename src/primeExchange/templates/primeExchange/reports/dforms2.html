@@ -17,11 +17,12 @@
   </style>
 </head>
 <body>
+
 <br />
 <br />
 
 {% load widget_tweaks %}
-<form action="/edit_drow2/{{ item.recordID }}/" method="POST" class="form-classer">
+<form action="/new_drow2/" method="POST" class="form-classer">
   {% csrf_token %}
 {% for field in form %}
   <div class="form-group{% if field.errors %} has-error{% endif %}">
@@ -32,10 +33,9 @@
     {% endfor %}
   </div>
 {% endfor %}
-{{ item.doctor.doctorID }}
-
 <input type="submit" value="save" class="btn btn-success">
 </button>
 </form>
+
 </body>
 </html>

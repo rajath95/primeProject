@@ -84,6 +84,7 @@ class SMSlookup(models.Model):
 	doctorName = models.CharField(max_length=100,null=False)
 	SMSContact = models.IntegerField (null = False)
 	UpdatedOn = models.DateTimeField(default=timezone.now, null=True)
+	
 
 	def __unicode__(self):
 		return str(self.doctorID)

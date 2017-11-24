@@ -324,3 +324,30 @@ def edit_drow2(request,id):
 	token["form"]=com_form
 	token["item"]=com
 	return render_to_response('primeExchange/reports/edit_dforms2.html',token)
+
+def new_drow1(request):
+	if request.method == 'POST':
+		form=DoctorForm(request.POST)
+		if form.is_valid():
+			com=form.save()
+			return HttpResponseRedirect('/reports/')
+	else:
+		form=DoctorForm()
+	token={}
+	token.update(csrf(request))
+	token['form']=form
+	return render_to_response('primeExchange/reports/dforms1.html',token)
+
+
+def new_drow2(request):
+	if request.method == 'POST':
+		form=SMSForm(request.POST)
+		if form.is_valid():
+			com=form.save()
+			return HttpResponseRedirect('/reports/')
+	else:
+		form=SMSForm()
+	token={}
+	token.update(csrf(request))
+	token['form']=form
+	return render_to_response('primeExchange/reports/dforms2.html',token)

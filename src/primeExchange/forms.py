@@ -127,6 +127,7 @@ class SMSForm(forms.ModelForm):
 		com.doctorName=self.cleaned_data['doctorName']
 		com.SMSContact=self.cleaned_data['SMSContact']
 		com.UpdatedOn=self.cleaned_data['UpdatedOn']
+		#com.doctorID=com.doctor.doctorID
 
 		if commit:
 			com.save()
