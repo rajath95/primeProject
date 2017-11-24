@@ -104,7 +104,6 @@ class DoctorForm(forms.ModelForm):
 
 	def save(self,commit=True):
 		com=super(DoctorForm,self).save(commit=False)
-		com.doctorID=self.cleaned_data['doctorID']
 		com.doctorName=self.cleaned_data['doctorName']
 		com.doctorDesignation=self.cleaned_data['doctorDesignation']
 		com.doctorSpecialization=self.cleaned_data['doctorSpecialization']
@@ -123,8 +122,7 @@ class SMSForm(forms.ModelForm):
 		fields=("recordID","doctor","doctorName","SMSContact","UpdatedOn")
 
 	def save(self,commit=True):
-		com=super(DoctorForm,self).save(commit=False)
-		com.recordID=self.cleaned_data['recordID']
+		com=super(SMSForm,self).save(commit=False)
 		com.doctor=self.cleaned_data['doctor']
 		com.doctorName=self.cleaned_data['doctorName']
 		com.SMSContact=self.cleaned_data['SMSContact']
