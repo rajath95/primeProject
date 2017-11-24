@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from .models import Profile,Commodities
+from .models import Profile,Commodities,doctorMaster,SMSlookup
 from django.contrib.auth.forms import AuthenticationForm,UserCreationForm
 from django import forms
 from django.contrib.auth import login,authenticate
@@ -90,6 +90,45 @@ class CommoditiesForm(forms.ModelForm):
 		com.commodity=self.cleaned_data['commodity']
 		com.price=self.cleaned_data['price']
 		com.date=self.cleaned_data['date']
+
+		if commit:
+			com.save()
+
+		return com
+
+class DoctorForm(forms.ModelForm):
+
+	class Meta:
+		model=doctorMaster
+		fields=("doctorID","doctorName","doctorDesignation","doctorSpecialization","UpdatedOn")
+
+	def save(self,commit=True):
+		com=super(DoctorForm,self).save(commit=False)
+		com.doctorID=self.cleaned_data['doctorID']
+		com.doctorName=self.cleaned_data['doctorName']
+		com.doctorDesignation=self.cleaned_data['doctorDesignation']
+		com.doctorSpecialization=self.cleaned_data['doctorSpecialization']
+		com.UpdatedOn=self.cleaned_data['UpdatedOn']
+
+		if commit:
+			com.save()
+
+		return com
+
+
+class SMSForm(forms.ModelForm):
+
+	class Meta:
+		model=SMSlookup
+		fields=("recordID","doctor","doctorName","SMSContact","UpdatedOn")
+
+	def save(self,commit=True):
+		com=super(DoctorForm,self).save(commit=False)
+		com.recordID=self.cleaned_data['recordID']
+		com.doctor=self.cleaned_data['doctor']
+		com.doctorName=self.cleaned_data['doctorName']
+		com.SMSContact=self.cleaned_data['SMSContact']
+		com.UpdatedOn=self.cleaned_data['UpdatedOn']
 
 		if commit:
 			com.save()

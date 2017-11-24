@@ -2,7 +2,7 @@ from django.core.context_processors import csrf
 from django.http import HttpResponseRedirect
 from django.shortcuts import render,redirect,render_to_response,get_object_or_404
 from .models import Profile,Commodities,doctorMaster,SMSlookup
-from .forms import SignupForm,LoginForm,UserForm,CommoditiesForm
+from .forms import SignupForm,LoginForm,UserForm,CommoditiesForm,DoctorForm,SMSForm
 from django.contrib.auth import login,authenticate,logout,get_user_model
 from django.contrib.auth.models import User
 from rest_framework.response import Response
@@ -287,7 +287,7 @@ def delete_drow2(request,id):
 		row.delete()
 		return HttpResponseRedirect("/dreports/")
 
-"""
+
 
 def edit_drow1(request,id):
 	com=get_object_or_404(doctorMaster,doctorID=id)
@@ -306,6 +306,8 @@ def edit_drow1(request,id):
 	token["item"]=com
 	return render_to_response('primeExchange/reports/edit_dforms1.html',token)
 
+
+
 def edit_drow2(request,id):
 	com=get_object_or_404(SMSlookup,recordID=id)
 	if request.method == 'POST':
@@ -322,5 +324,3 @@ def edit_drow2(request,id):
 	token["form"]=com_form
 	token["item"]=com
 	return render_to_response('primeExchange/reports/edit_dforms2.html',token)
-
-"""
