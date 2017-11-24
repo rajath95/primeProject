@@ -64,7 +64,7 @@ class doctorMaster(models.Model):
 	doctorSpecialization = models.CharField(max_length=100,null=True)
 	UpdatedOn = models.DateTimeField(default=timezone.now, null=True)
 
-	def __unicode__(self):
+	def __str__(self):
 		return str(self.doctorID)
 
 class serviceCodeMaster(models.Model):
@@ -75,7 +75,7 @@ class serviceCodeMaster(models.Model):
 	serviceCodeCategory = models.CharField(max_length=100,null=True)
 	UpdatedOn = models.DateTimeField(default=timezone.now, null=True)
 
-	def __unicode__(self):
+	def __str__(self):
 		return str(self.recordID)
 
 class SMSlookup(models.Model):
@@ -84,7 +84,7 @@ class SMSlookup(models.Model):
 	doctorName = models.CharField(max_length=100,null=False)
 	SMSContact = models.IntegerField (null = False)
 	UpdatedOn = models.DateTimeField(default=timezone.now, null=True)
-	
 
-	def __unicode__(self):
-		return str(self.doctorID)
+
+	def __str__(self):
+		return str(self.recordID)

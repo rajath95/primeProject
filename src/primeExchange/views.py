@@ -330,7 +330,7 @@ def new_drow1(request):
 		form=DoctorForm(request.POST)
 		if form.is_valid():
 			com=form.save()
-			return HttpResponseRedirect('/reports/')
+			return HttpResponseRedirect('/dreports/')
 	else:
 		form=DoctorForm()
 	token={}
@@ -344,7 +344,7 @@ def new_drow2(request):
 		form=SMSForm(request.POST)
 		if form.is_valid():
 			com=form.save()
-			return HttpResponseRedirect('/reports/')
+			return HttpResponseRedirect('/dreports/')
 	else:
 		form=SMSForm()
 	token={}
