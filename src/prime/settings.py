@@ -43,7 +43,8 @@ INSTALLED_APPS = (
     'django_extensions',
     'django_tables2',
     'widget_tweaks',
-    
+    'mod_wsgi.server'
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -118,6 +119,8 @@ EMAIL_HOST_USER = 'primeuser95@gmail.com'
 EMAIL_HOST_PASSWORD = 'eautomaton123'
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'primeuser95@gmail.com'
+STATIC_ROOT = os.path.join(BASE_DIR,"static/")
+
 
 
 LOGIN_URL='/login'
