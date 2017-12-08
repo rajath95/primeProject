@@ -1,7 +1,7 @@
 from django.core.context_processors import csrf
 from django.http import HttpResponseRedirect
 from django.shortcuts import render,redirect,render_to_response,get_object_or_404
-from .models import Profile,Commodities,doctorMaster,SMSlookup
+from .models import Profile,Commodities,doctorMaster,SMSlookup,HospitalRevenue
 from .forms import SignupForm,LoginForm,UserForm,CommoditiesForm,DoctorForm,SMSForm
 from django.contrib.auth import login,authenticate,logout,get_user_model
 from django.contrib.auth.models import User
@@ -201,9 +201,11 @@ def monthly(request):
 		m=int(request.GET.get('month'))
 	print(m)
 	for item in commodity_list:
-	    month=Commodities.objects.get(commodity=item).date.month
-	    print(type(month))
-	    if month==m:
+		month=Commodities.objects.filter(commodity=item)
+		month=month[0].date.month
+		
+		print(type(month))
+		if month==m:
 	    		z=1
 	    		total+=item.price
 	    		obj_list.append(item)
@@ -351,3 +353,9 @@ def new_drow2(request):
 	token.update(csrf(request))
 	token['form']=form
 	return render_to_response('primeExchange/reports/dforms2.html',token)
+
+def display(request,id):
+	records=HospitalRevenue.objects.filter(month=id)
+	token={}
+	token['rows']=records
+	return render_to_response('primeExchange/visual.html',token)

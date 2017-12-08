@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title> add row </title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style type="text/css">
+  .form-classer
+  {
+    top:30%;
+    left:30%;
+    border-radius: 3px;
+    width: 120%;
+    height:40px;
+    font-size: 15px;
+    color: green;
+  }
+  </style>
+</head>
+<body>
+
+<br />
+<br />
+
+{% load widget_tweaks %}
+<form action="/new_row/" method="POST" class="form-classer">
+  {% csrf_token %}
+{% for field in form %}
+  <div class="form-group{% if field.errors %} has-error{% endif %}">
+    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+    {% render_field field  %}
+    {% for error in field.errors %}
+      <p class="help-block">{{ error }}</p>
+    {% endfor %}
+  </div>
+{% endfor %}
+<input type="submit" value="save" class="btn btn-success">
+</button>
+</form>
+
+</body>
+</html>

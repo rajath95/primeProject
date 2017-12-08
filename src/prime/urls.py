@@ -53,7 +53,8 @@ urlpatterns = [
     url(r'^edit_drow2/(?P<id>[0-9_]+)/$',edit_drow2),
     url(r'^new_drow1/$',new_drow1),
     url(r'^new_drow2/$',new_drow2),
-    url(r'^visual/$',display),
+    url(r'^visual/(?P<id>[0-9]+)$',display),
+
 
 
 

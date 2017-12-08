@@ -15,6 +15,8 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+STATIC_ROOT=os.path.join(BASE_DIR,"primeExchange/static")
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -120,7 +122,7 @@ EMAIL_HOST_USER = 'primeuser95@gmail.com'
 EMAIL_HOST_PASSWORD = 'eautomaton123'
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'primeuser95@gmail.com'
-STATIC_ROOT = os.path.join(BASE_DIR,"static/")
+#STATIC_ROOT = os.path.join(BASE_DIR,"static/")
 
 
 

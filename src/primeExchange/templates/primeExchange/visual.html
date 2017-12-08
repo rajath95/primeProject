@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Stacked Bar Chart with Groups</title>
+
+    {% load staticfiles %}
+
+
+    <script src="{% static 'primeExchange/js/Chart.bundle.js' %}" ></script>
+    <script src="{% static 'primeExchange/js/utils.js' %}" ></script>
+
+    <style>
+    canvas {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div style="width: 75%">
+        <canvas id="canvas"></canvas>
+    </div>
+    <button id="randomizeData">Randomize Data</button>
+    <script>
+        var barChartData = {
+            labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
+            datasets: [{
+                label: 'Dataset 1',
+                backgroundColor: window.chartColors.red,
+                stack: 'Stack 0',
+                data: [
+                  {{ rows.act_pharma }},
+                  100,
+                  100,
+                  100,
+
+
+                ]
+            }, {
+                label: 'Dataset 2',
+                backgroundColor: window.chartColors.blue,
+                stack: 'Stack 0',
+                data: [
+                  50,
+                  50,
+                  50,
+                  50
+                ]
+            }, {
+                label: 'Dataset 3',
+                backgroundColor: window.chartColors.green,
+                stack: 'Stack 0',
+                data: [
+                    75,
+                    75,
+                    75,
+                    75
+
+                ]
+            }, {
+                label: 'Dataset 3',
+                backgroundColor: window.chartColors.red,
+                stack: 'Stack 1',
+                data: [
+                    75,
+                    75,
+                    75,
+                    75
+
+                ]
+            }, {
+                label: 'Dataset 3',
+                backgroundColor: window.chartColors.blue,
+                stack: 'Stack 1',
+                data: [
+                    75,
+                    75,
+                    75,
+                    75
+
+                ]
+            },  {
+                label: 'Dataset 3',
+                backgroundColor: window.chartColors.green,
+                stack: 'Stack 1',
+                data: [
+                    75,
+                    75,
+                    75,
+                    75
+
+                ]
+            }
+          ]
+        };
+        window.onload = function() {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myBar = new Chart(ctx, {
+                type: 'bar',
+                data: barChartData,
+                options: {
+                    title:{
+                        display:true,
+                        text:"Chart.js Bar Chart - Stacked"
+                    },
+                    tooltips: {
+                        mode: 'index',
+                        intersect: false
+                    },
+                    responsive: true,
+                    scales: {
+                        xAxes: [{
+                            stacked: true,
+                        }],
+                        yAxes: [{
+                            stacked: true
+                        }]
+                    }
+                }
+            });
+        };
+        document.getElementById('randomizeData').addEventListener('click', function() {
+            barChartData.datasets.forEach(function(dataset, i) {
+                dataset.data = dataset.data.map(function() {
+                    return randomScalingFactor();
+                });
+            });
+            window.myBar.update();
+        });
+    </script>
+</body>
+
+</html>
