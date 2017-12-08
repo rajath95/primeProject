@@ -20,77 +20,79 @@
 </head>
 
 <body>
+    <center>
     <div style="width: 75%">
         <canvas id="canvas"></canvas>
     </div>
-    <button id="randomizeData">Randomize Data</button>
+  </center>
     <script>
+
         var barChartData = {
             labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
             datasets: [{
-                label: 'Dataset 1',
+                label: 'Average Pharma',
                 backgroundColor: window.chartColors.red,
                 stack: 'Stack 0',
                 data: [
-                  {{ rows.act_pharma }},
-                  100,
-                  100,
-                  100,
+                  {{ week1.avg_pharma }},
+                  {{ week2.avg_pharma }},
+                  {{ week3.avg_pharma }},
+                  {{ week4.avg_pharma }}
 
 
                 ]
             }, {
-                label: 'Dataset 2',
+                label: 'Average Lab',
                 backgroundColor: window.chartColors.blue,
                 stack: 'Stack 0',
                 data: [
-                  50,
-                  50,
-                  50,
-                  50
+                  {{ week1.avg_lab }},
+                  {{ week2.avg_lab }},
+                  {{ week3.avg_lab }},
+                  {{ week4.avg_lab }}
                 ]
             }, {
-                label: 'Dataset 3',
+                label: 'Average Radiology',
                 backgroundColor: window.chartColors.green,
                 stack: 'Stack 0',
                 data: [
-                    75,
-                    75,
-                    75,
-                    75
+                    {{ week1.avg_rad }},
+                    {{ week2.avg_rad }},
+                    {{ week3.avg_rad }},
+                    {{ week4.avg_rad }}
 
                 ]
             }, {
-                label: 'Dataset 3',
-                backgroundColor: window.chartColors.red,
+                label: 'Actual Pharma',
+                backgroundColor: window.chartColors.orange,
                 stack: 'Stack 1',
                 data: [
-                    75,
-                    75,
-                    75,
-                    75
+                    {{ week1.act_pharma }},
+                    {{ week2.act_pharma }},
+                    {{ week3.act_pharma }},
+                    {{ week4.act_pharma }}
 
                 ]
             }, {
-                label: 'Dataset 3',
-                backgroundColor: window.chartColors.blue,
+                label: 'Actual Lab',
+                backgroundColor: window.chartColors.purple,
                 stack: 'Stack 1',
                 data: [
-                    75,
-                    75,
-                    75,
-                    75
+                    {{ week1.act_lab }},
+                    {{ week2.act_lab }},
+                    {{ week3.act_lab }},
+                    {{ week4.act_lab }}
 
                 ]
             },  {
-                label: 'Dataset 3',
-                backgroundColor: window.chartColors.green,
+                label: 'Actual Radiology',
+                backgroundColor: window.chartColors.yellow,
                 stack: 'Stack 1',
                 data: [
-                    75,
-                    75,
-                    75,
-                    75
+                    {{ week1.act_rad }},
+                    {{ week2.act_rad }},
+                    {{ week3.act_rad }},
+                    {{ week4.act_rad }}
 
                 ]
             }
@@ -102,9 +104,18 @@
                 type: 'bar',
                 data: barChartData,
                 options: {
-                    title:{
+                    legend:{
                         display:true,
-                        text:"Chart.js Bar Chart - Stacked"
+                        labels:
+                          {fontSize:20
+                          }
+                    },
+
+                    title:{
+                        fontSize: 20,
+                        display:true,
+                        text:"PRIME REPORT"
+
                     },
                     tooltips: {
                         mode: 'index',
@@ -114,6 +125,10 @@
                     scales: {
                         xAxes: [{
                             stacked: true,
+                            ticks:
+                            {
+                              fontSize:30
+                            }
                         }],
                         yAxes: [{
                             stacked: true
@@ -122,15 +137,9 @@
                 }
             });
         };
-        document.getElementById('randomizeData').addEventListener('click', function() {
-            barChartData.datasets.forEach(function(dataset, i) {
-                dataset.data = dataset.data.map(function() {
-                    return randomScalingFactor();
-                });
-            });
-            window.myBar.update();
-        });
+
     </script>
+  </center>
 </body>
 
 </html>

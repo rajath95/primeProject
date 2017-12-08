@@ -203,7 +203,7 @@ def monthly(request):
 	for item in commodity_list:
 		month=Commodities.objects.filter(commodity=item)
 		month=month[0].date.month
-		
+
 		print(type(month))
 		if month==m:
 	    		z=1
@@ -357,5 +357,8 @@ def new_drow2(request):
 def display(request,id):
 	records=HospitalRevenue.objects.filter(month=id)
 	token={}
-	token['rows']=records
+	token['week1']=records[0]
+	token['week2']=records[1]
+	token['week3']=records[2]
+	token['week4']=records[3]
 	return render_to_response('primeExchange/visual.html',token)
