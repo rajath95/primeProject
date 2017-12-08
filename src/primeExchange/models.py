@@ -88,3 +88,21 @@ class SMSlookup(models.Model):
 
 	def __str__(self):
 		return str(self.recordID)
+
+
+class HospitalRevenue(models.Model):
+
+	MONTH_NO= (('1','1'),('2','2'),('3','3'),('4','4'),('5','5'),('6','6'),('7','7'),('8','8'),('9','9'),)
+	WEEK_NO= (('1','1'),('2','2'),('3','3'),('4','4'),)
+	recordID=models.AutoField(primary_key=True)
+	month=models.CharField(default="1",choices=MONTH_NO,max_length=3)
+	week=models.CharField(default="1",choices=WEEK_NO,max_length=3)
+	avg_pharma=models.IntegerField(null=True)
+	avg_lab=models.IntegerField(null=True)
+	avg_rad=models.IntegerField(null=True)
+	act_pharma=models.IntegerField(null=True)
+	act_lab=models.IntegerField(null=True)
+	act_rad=models.IntegerField(null=True)
+
+	def __str__(self):
+		return str(self.recordID)

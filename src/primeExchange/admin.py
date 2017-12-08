@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Profile,Commodities,doctorMaster,serviceCodeMaster,SMSlookup
+from .models import Profile,Commodities,doctorMaster,serviceCodeMaster,SMSlookup,HospitalRevenue
 from .forms import SignupForm
 # Register your models here.
 
@@ -26,6 +26,13 @@ class SMSAdmin(admin.ModelAdmin):
 
 admin.site.register(SMSlookup,SMSAdmin)
 
+
+class HospitalRevenueAdmin(admin.ModelAdmin):
+
+	list_display=["recordID","month","week","avg_pharma","avg_lab","avg_rad","act_lab","act_pharma","act_rad"]
+	WEEK_NO= (('1','1'),('2','2'),('3','3'),('4','4'),)
+
+admin.site.register(HospitalRevenue,HospitalRevenueAdmin)
 
 
 
