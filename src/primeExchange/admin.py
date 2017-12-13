@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Profile,Commodities,doctorMaster,serviceCodeMaster,SMSlookup,HospitalRevenue
+from .models import specializatonMaster
 from .forms import SignupForm
 # Register your models here.
 
@@ -17,7 +18,7 @@ class CommodityAdmin(admin.ModelAdmin):
 admin.site.register(Commodities,CommodityAdmin)
 
 class doctorAdmin(admin.ModelAdmin):
-	list_display=["doctorID"]
+	list_display = ["doctorID"]
 
 admin.site.register(doctorMaster,doctorAdmin)
 
@@ -34,6 +35,17 @@ class HospitalRevenueAdmin(admin.ModelAdmin):
 
 admin.site.register(HospitalRevenue,HospitalRevenueAdmin)
 
+class specializatonMasterAdmin(admin.ModelAdmin):
+	list_display=specializatonMaster._meta.get_all_field_names()
 
+admin.site.register(specializatonMaster,specializatonMasterAdmin)
+
+class serviceCodeMasterAdmin(admin.ModelAdmin):
+	list_display=serviceCodeMaster._meta.get_all_field_names()
+
+admin.site.register(serviceCodeMaster,serviceCodeMasterAdmin)
+
+
+#admin.site.register(doctorMaster,doctorMasterAdmin)
 
 #class RawBillingRecordAdmin(admin.ModelAdmin):

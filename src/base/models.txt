@@ -1,0 +1,26 @@
+class doctorMaster(models.Model):
+    doctorID = models.AutoField(primary_key=True)
+    doctorName = models.CharField(max_length=100,null=False)
+    doctorEmpID = models.IntegerField (null = False)   
+    doctorDesignation = models.CharField(max_length=100,null=True)
+    doctorSpecialization = models.CharField(max_length=100,null=True)
+    doctorContact = models.IntegerField (null = True)
+    SMSConsentEndDate = models.CharField(max_length=1,null=True,default='N')    
+    SMSConsentEndDate = models.DateTimeField(default=datetime.datetime.now()- datetime.timedelta(days=1), null=True)
+    UpdatedOn = models.DateTimeField(default=timezone.now, null=True) 
+
+class specializatonMaster(models.Model):
+    recordID = models.AutoField(primary_key=True)
+    specializationID = models.IntegerField(null = False)
+    specializationName = models.CharField(max_length=100,null=False)
+    UpdatedOn = models.DateTimeField(default=timezone.now, null=True) 
+   
+
+class serviceCodeMaster(models.Model):
+    recordID = models.AutoField(primary_key=True)
+    serviceCode = models.CharField(max_length=100,null=False)
+    serviceName = models.CharField(max_length=500,null=True)    
+    serviceCodeCategoryID = models.CharField(max_length=100,null=False)   
+    serviceCodeCategory = models.CharField(max_length=100,null=True)
+    BusinessUnitCategory = models.CharField(max_length=100,null=True)   
+    UpdatedOn = models.DateTimeField(default=timezone.now, null=True) 

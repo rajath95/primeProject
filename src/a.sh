@@ -1,6 +1,6 @@
 #!/bin/sh
 
-a=` ps -aux| grep runserver | cut -d " " -f5 `
+a=` ps -aux| grep runserver | cut -d " " -f4-6 `
 
 for process in $a
 do 

@@ -4,7 +4,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils import timezone
 import datetime as dt
-from datetime import datetime
+from datetime import datetime,timedelta
 
 # Create your models here.
 
@@ -51,6 +51,7 @@ class Commodities(models.Model):
 	commodity=models.CharField(max_length=20)
 	price=models.IntegerField()
 	date=models.DateField(default=dt.date.today)
+	quantity=models.IntegerField(default=1)
 
 
 	def __str__(self):
@@ -60,8 +61,12 @@ class doctorMaster(models.Model):
 
 	doctorID = models.AutoField(primary_key=True)
 	doctorName = models.CharField(max_length=100,null=False)
+	doctorEmpID = models.IntegerField (null = False,default=1)
 	doctorDesignation = models.CharField(max_length=100,null=True)
 	doctorSpecialization = models.CharField(max_length=100,null=True)
+	doctorContact = models.IntegerField (null = True)
+	SMSConsentEndDate = models.CharField(max_length=1,null=True,default='N')
+	SMSConsentEndDate = models.DateTimeField(default=datetime.now()-timedelta(days=1), null=True)
 	UpdatedOn = models.DateTimeField(default=timezone.now, null=True)
 
 	def __str__(self):
@@ -72,7 +77,9 @@ class serviceCodeMaster(models.Model):
 	recordID = models.AutoField(primary_key=True)
 	serviceCode = models.CharField(max_length=100,null=False)
 	serviceName = models.CharField(max_length=500,null=True)
+	serviceCodeCategoryID = models.CharField(max_length=100,null=False,default=1)
 	serviceCodeCategory = models.CharField(max_length=100,null=True)
+	BusinessUnitCategory = models.CharField(max_length=100,null=True,default=1)
 	UpdatedOn = models.DateTimeField(default=timezone.now, null=True)
 
 	def __str__(self):
@@ -106,3 +113,13 @@ class HospitalRevenue(models.Model):
 
 	def __str__(self):
 		return str(self.recordID)
+
+
+class specializatonMaster(models.Model):
+    recordID = models.AutoField(primary_key=True)
+    specializationID = models.IntegerField(null = False)
+    specializationName = models.CharField(max_length=100,null=False)
+    UpdatedOn = models.DateTimeField(default=timezone.now, null=True)
+
+    def __str__(self):
+         return str(self.recordID)
