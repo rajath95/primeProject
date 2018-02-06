@@ -362,3 +362,73 @@ def display(request,id):
 	token['week3']=records[2]
 	token['week4']=records[3]
 	return render_to_response('primeExchange/visual.html',token)
+
+def apilogin(request):
+	token={}
+	token.update(csrf(request))
+	token['form']=LoginForm
+	return render_to_response('primeExchange/apilogin.html',token)
+
+
+def api_process_login(request):
+	username=request.POST.get('username','')
+	password=request.POST.get('password','')
+	user=authenticate(username=username,password=password)
+
+
+	if user is not None:
+		if user.is_active:
+			login(request,user)
+			name,role,session=update_session(username,request)
+			return HttpResponseRedirect('/PrimeAppLoginAPI',{'name':name,'role':role})
+		else:
+			return HttpResponseRedirect('/login')
+	else:
+		return HttpResponseRedirect('/login')
+
+
+
+@api_view(['GET', 'POST'])
+def PrimeAppLoginAPI(request):
+    role="none"
+    name=""
+    if 'role' in request.session:
+        role=request.session['role']
+        name=request.session['username']
+    api={}
+
+    username=request.POST.get('username','')
+    password=request.POST.get('password','')
+    if request.method == 'POST':
+       api['method']='post'
+    api['UserID']=username
+    api['key']='good'
+    api['userid']=username
+
+    api['"error"']='false'
+
+    api["role"]=role
+    api["detail_data"]= {
+		"error": "false",
+		"userid": "userid",
+		"pending_day": 23,
+		"agreed_day": 100,
+		"not_agreed_day": 10,
+		"pending_monthly": 23,
+		"agreed_monthly": 100,
+		"not_agreed_monthly": 10,
+		"detail_data": [{
+				"name": "name",
+				"pending": 23,
+				"agreed": 222,
+				"not_agreed": 2
+			},
+			{
+				"name": "name",
+				"pending": 23,
+				"agreed": 222,
+				"not_agreed": 2
+			}
+		]
+	}
+    return Response(api)
