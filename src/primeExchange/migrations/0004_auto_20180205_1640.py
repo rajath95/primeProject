@@ -8,13 +8,13 @@ import datetime
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('primeExchange', '0004_auto_20171213_1533'),
+        ('primeExchange', '0003_auto_20180205_1639'),
     ]
 
     operations = [
         migrations.AlterField(
             model_name='doctormaster',
             name='SMSConsentEndDate',
-            field=models.DateTimeField(null=True, default=datetime.datetime(2017, 12, 12, 15, 52, 23, 764)),
+            field=models.DateTimeField(null=True, default=datetime.datetime(2018, 2, 4, 16, 40, 49, 915909)),
         ),
     ]
