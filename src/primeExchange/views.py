@@ -12,8 +12,9 @@ from django.contrib import messages
 from django import forms
 from django.template import RequestContext
 from django.contrib import messages
-from django.views.decorators.csrf import csrf_protect
+from django.views.decorators.csrf import csrf_protect,csrf_exempt
 import json
+from rest_framework import serializers
 
 
 @api_view()
@@ -363,13 +364,14 @@ def display(request,id):
 	token['week4']=records[3]
 	return render_to_response('primeExchange/visual.html',token)
 
+@csrf_exempt
 def apilogin(request):
 	token={}
 	token.update(csrf(request))
 	token['form']=LoginForm
 	return render_to_response('primeExchange/apilogin.html',token)
 
-
+@csrf_exempt
 def api_process_login(request):
 	username=request.POST.get('username','')
 	password=request.POST.get('password','')
@@ -389,46 +391,86 @@ def api_process_login(request):
 
 
 @api_view(['GET', 'POST'])
+@csrf_exempt
 def PrimeAppLoginAPI(request):
-    role="none"
-    name=""
-    if 'role' in request.session:
-        role=request.session['role']
-        name=request.session['username']
-    api={}
+	role="none"
+	name=""
 
-    username=request.POST.get('username','')
-    password=request.POST.get('password','')
-    if request.method == 'POST':
-       api['method']='post'
-    api['UserID']=username
-    api['key']='good'
-    api['userid']=username
 
-    api['"error"']='false'
+	api={}
+	if 'role' in request.session:
+		role=request.session['role']
+		name=request.session['username']
 
-    api["role"]=role
-    api["detail_data"]= {
-		"error": "false",
-		"userid": "userid",
-		"pending_day": 23,
-		"agreed_day": 100,
-		"not_agreed_day": 10,
-		"pending_monthly": 23,
-		"agreed_monthly": 100,
-		"not_agreed_monthly": 10,
-		"detail_data": [{
-				"name": "name",
-				"pending": 23,
-				"agreed": 222,
-				"not_agreed": 2
-			},
-			{
-				"name": "name",
-				"pending": 23,
-				"agreed": 222,
-				"not_agreed": 2
-			}
-		]
-	}
-    return Response(api)
+
+
+	if request.method== 'POST':
+		username=request.POST.get('username',)
+		password=request.POST.get('password',)
+		print("username",username)
+		print("password",password)
+
+		u=authenticate(username=username,password=password)
+		if u is not None:
+			if u.is_active:
+				user=User.objects.filter(username=username)
+				user=user[0]
+				fname=user.profile.first_name
+				username=user.username
+				api['method']='post'
+				api['UserID']=username
+				api['key']='good'
+				api['userid']=username
+				api['"error"']='false'
+				api["role"]=role
+				api["detail_data"]= {
+				"error": "false",
+		      	"userid": username,
+		      	"pending_day": 23,
+		      	"agreed_day": 100,
+				"not_agreed_day": 10,
+				"pending_monthly": 23,
+				"agreed_monthly": 100,
+				"not_agreed_monthly": 10,
+				"detail_data": [{
+					"id":1,
+					"uhid":2,
+					"first_name":fname,
+					"name":3 ,
+					"pending": 23,
+					"agreed": 222,
+					"not_agreed": 2
+					},
+					{
+					"name": fname,
+					"pending": 23,
+					"agreed": 222,
+					"not_agreed": 2
+					}
+					],
+					}
+				return Response(api)
+			else:
+				api["reason"]='inactive'
+				return Response(api)
+		else:
+			api["reason"]='user does not exist'
+			return Response(api)
+
+
+	else:
+				return Response(api)
+
+@api_view(['GET','POST'])
+def nothing(request):
+	import json
+	type={}
+	if request.method=='GET':
+		type['request']='GET'
+		return Response(type)
+	else:
+		print(request.body)
+		username=request.POST.get('username')
+		password=request.POST.get('password')
+		type['request']=username
+		return Response(type)
