@@ -20,7 +20,7 @@ from primeExchange.views import signup,login_view,logout_view,base,process_login
 from primeExchange.views import reports,primeadmin,analytics,contact,xreport,monthly,tables
 from primeExchange.views import delete_row,new_row,edit_row,dreports,delete_drow1,delete_drow2
 from primeExchange.views import edit_drow1,edit_drow2,new_drow1,new_drow2,display,apilogin
-from primeExchange.views import PrimeAppLoginAPI,api_process_login,nothing
+from primeExchange.views import PrimeAppLoginAPI,api_process_login,nothing,addendum,PrimeAppLoginAPI2
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -61,7 +61,9 @@ urlpatterns = [
     url(r'^apilogin/$',apilogin),
     url(r'^api_process_login/$',api_process_login),
     url(r'^PrimeAppLoginAPI/$',PrimeAppLoginAPI),
+    url(r'^PrimeAppLoginAPI2/$',PrimeAppLoginAPI2),
     url(r'^nothing/$',nothing),
+    url(r'^adder/$',addendum),
 
 
 

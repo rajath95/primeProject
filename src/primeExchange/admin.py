@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Profile,Commodities,doctorMaster,serviceCodeMaster,SMSlookup,HospitalRevenue
-from .models import specializatonMaster
+from .models import specializatonMaster,PredictedCommunicatedData,rawErrorRecord
 from .forms import SignupForm
 # Register your models here.
 
@@ -45,6 +45,16 @@ class serviceCodeMasterAdmin(admin.ModelAdmin):
 
 admin.site.register(serviceCodeMaster,serviceCodeMasterAdmin)
 
+class PredictedCommunicatedDataAdmin(admin.ModelAdmin):
+	list_display=PredictedCommunicatedData._meta.get_all_field_names()
+
+admin.site.register(PredictedCommunicatedData,PredictedCommunicatedDataAdmin)
+
+
+class rawErrorRecordAdmin(admin.ModelAdmin):
+	list_display=rawErrorRecord._meta.get_all_field_names()
+
+admin.site.register(rawErrorRecord,rawErrorRecordAdmin)
 
 #admin.site.register(doctorMaster,doctorMasterAdmin)
 

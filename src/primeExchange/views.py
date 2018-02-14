@@ -2,6 +2,7 @@ from django.core.context_processors import csrf
 from django.http import HttpResponseRedirect
 from django.shortcuts import render,redirect,render_to_response,get_object_or_404
 from .models import Profile,Commodities,doctorMaster,SMSlookup,HospitalRevenue
+from .models import PredictedCommunicatedData,rawErrorRecord
 from .forms import SignupForm,LoginForm,UserForm,CommoditiesForm,DoctorForm,SMSForm
 from django.contrib.auth import login,authenticate,logout,get_user_model
 from django.contrib.auth.models import User
@@ -15,6 +16,7 @@ from django.contrib import messages
 from django.views.decorators.csrf import csrf_protect,csrf_exempt
 import json
 from rest_framework import serializers
+from django.db import connection
 
 
 @api_view()
@@ -474,3 +476,114 @@ def nothing(request):
 		password=request.POST.get('password')
 		type['request']=username
 		return Response(type)
+
+@api_view(['GET','POST'])
+def addendum(request):
+	import json
+
+	import datetime
+	txt={}
+	if request.method=='POST':
+		username=request.POST.get('userid')
+		UHID=request.POST.get('UHID')
+		key=request.POST.get('key')
+		status=request.POST.get('key')
+		comment=request.POST.get('comment')
+		name=request.POST.get('Doctor')
+		cursor=connection.cursor()
+
+		txt['username']=username
+		txt['UHID']=UHID
+		txt['key']=key
+		txt['status']=status
+		txt['comment']=comment
+		txt['name']=name
+		now=datetime.datetime.now()
+		date=str(now)[:10]
+		print(date)
+		#query="select * from primeExchange_predictedcommunicateddata where UHID={} and Date(UpdatedOn)=\"{}\" and DoctorName={}".format(UHID,date,name)
+		#result=PredictedCommunicatedData.objects.raw(query)
+		m=[]
+		r=cursor.execute("select * from primeExchange_predictedcommunicateddata where UHID=%s and DoctorName=%s and Date(UpdatedOn)='%s';" % (UHID,name,date))
+		row=cursor.fetchall()
+		print("row = ",row)
+		#rows=row.objects.all()
+		#for r in rows.iterator():
+			#print("UHID",r.UHID)
+		#print(result)
+		return Response(txt)
+	return Response(txt)
+
+
+@api_view(['GET', 'POST'])
+@csrf_exempt
+def PrimeAppLoginAPI2(request):
+	role="none"
+	name=""
+	from .siteConfig import setSiteSpecificConfigValues
+	siteConfigValues = {}
+	error_record = {}
+	PatientActedRecord = {}
+	siteConfigValues = setSiteSpecificConfigValues()
+	para_clientID = siteConfigValues['clientID']
+	api_response = {'APIStatus':'FAIL'}
+
+
+
+	if 'role' in request.session:
+		role=request.session['role']
+		name=request.session['username']
+
+
+
+	if request.method== 'POST':
+
+		username=request.POST.get('username',)
+		password=request.POST.get('password',)
+		print("username",username)
+		print("password",password)
+		try:
+			u=authenticate(username=username,password=password)
+			
+			if u is not None:
+				if u.is_active:
+					print("u is",u.is_active)
+					print("para_clientID is",para_clientID)
+					print("user client is",u.profile.clientID)
+					if u.profile.clientID==para_clientID:
+						#user=User.objects.filter(username=username)
+						#user=user[0]
+						#fname=user.profile.first_name
+						#username=user.username
+						api_response["APIStatus"]='success'
+						api_response['method']='post'
+						api_response['UserID']=username
+						api_response['key']='good'
+						api_response['userid']=username
+						api_response['"error"']='false'
+						api_response["role"]=role
+						return Response(api_response)
+					else:
+						api_response['error']='Wrong Client ID'
+						return Response(api_response)
+
+				else:
+					api_response["error"]='user is inactive'
+					return Response(api_response)
+			else:
+				api_response["error"]='user does not exist'
+				error_record['ErrorMessage']='User Does Not Exist'
+				raw_ErrorRecord=rawErrorRecord(**error_record)
+				raw_ErrorRecord.save()
+				return Response(api_response)
+
+		except Exception as e:
+			error_record['ErrorMessage']='User Record Not Found'
+			raw_ErrorRecord=rawErrorRecord(**error_record)
+			raw_ErrorRecord.save()
+			api_response = {'APIStatus':'LOGIN FAILED'}
+			return Response(api_response)
+
+
+	else:
+				return Response(api_response)
