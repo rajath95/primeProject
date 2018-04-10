@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"s",
+				"span\tTag"
+			],
+			[
 				"p",
 				"people"
 			],
@@ -34,10 +38,6 @@
 			[
 				"fo",
 				"font-size"
-			],
-			[
-				"s",
-				"size"
 			],
 			[
 				"a",
@@ -215,32 +215,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/home/rajath/simple-ajax-crud-master/mysite/urls.py",
-			"settings":
-			{
-				"buffer_size": 502,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/rajath/simple-ajax-crud-master/mysite/books/templates/books/book_list.html",
-			"settings":
-			{
-				"buffer_size": 926,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/rajath/simple-ajax-crud-master/mysite/books/views.py",
-			"settings":
-			{
-				"buffer_size": 1948,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -272,14 +246,22 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+	],
 	"file_history":
 	[
+		"/home/rajath/simple-ajax-crud-master/manage.py",
+		"/home/rajath/prime/src/primeExchange/templates/primeExchange/xreport.html",
+		"/home/rajath/prime/src/primeExchange/static/primeExchange/css/bootstrap.min.css",
+		"/home/rajath/simple-ajax-crud-master/mysite/urls.py",
+		"/home/rajath/simple-ajax-crud-master/mysite/books/views.py",
+		"/home/rajath/simple-ajax-crud-master/mysite/books/templates/books/book_list.html",
 		"/home/rajath/prime/src/primeExchange/forms.py",
 		"/home/rajath/prime/src/primeExchange/admin.py",
 		"/home/rajath/prime/src/prime/urls.py",
 		"/home/rajath/prime/src/primeExchange/templates/primeExchange/base.html",
 		"/home/rajath/prime/src/prime/settings.py",
-		"/home/rajath/prime/src/primeExchange/templates/primeExchange/xreport.html",
 		"/home/rajath/prime/src/primeExchange/views.py",
 		"/home/rajath/prime/src/primeExchange/models.py",
 		"/home/rajath/prime/src/primeExchange/static/primeExchange/css/style.css",
@@ -355,97 +337,13 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/home/rajath/simple-ajax-crud-master/mysite/urls.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 502,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								502,
-								502
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/home/rajath/simple-ajax-crud-master/mysite/books/templates/books/book_list.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 926,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								352,
-								352
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 432.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/home/rajath/simple-ajax-crud-master/mysite/books/views.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1948,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								198,
-								198
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
@@ -466,11 +364,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.845291479821,
 			1.0
 		],
 		"rows":

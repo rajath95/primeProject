@@ -133,3 +133,31 @@ class SMSForm(forms.ModelForm):
 			com.save()
 
 		return com
+
+class DateForm(forms.Form):
+
+	OPTIONS=(
+		("January","JANUARY"),
+		("February","FEBRUARY"),
+		("March","MARCH"),
+		("April","APRIL"),
+		("May","MAY"),
+		("June","JUNE"),
+		("July","JULY"),
+		("August","AUGUST"),
+		("September","SEPTEMBER"),
+		("October","OCTOBER"),
+		("November","NOVEMBER"),
+		("December","DECEMBER")
+		)
+	YEAR=(
+	("2014","2014"),
+	("2015","2015"),
+	("2016","2016"),
+	("2017","2017"),
+	("2018","2018")
+	)
+
+
+	month=forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple,choices=OPTIONS,initial=['January'])
+	years=forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple,choices=YEAR,initial=['2018'] )

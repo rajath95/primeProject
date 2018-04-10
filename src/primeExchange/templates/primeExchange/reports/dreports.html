@@ -96,9 +96,9 @@
 
 	<div>
 				<div class="col-sm-2">
-				<form action="/delete_drow1/{{ item.doctorID }}/" method="post">
+				<form action="/delete_drow1/{{ item.doctorID }}/" method="POST">
 					{% csrf_token %}
-					<input type='hidden' name='csrfmiddlewaretoken' value='NOIyl2mdEwuIeb7k3SAWkXMiF0AZwnfx' />
+				<input type='hidden' name='csrfmiddlewaretoken' value='NOIyl2mdEwuIeb7k3SAWkXMiF0AZwnfx' />
 
 	       <button type="submit" class="btn btn-danger btn-sm js-delete-book" value="delete">
 					 <span class="glyphicon glyphicon-trash"></span> Delete
@@ -167,8 +167,14 @@
 <button type="button" class="btn btn-primary" onclick="location.href=/new_drow2/">
 	<span class="glyphicon glyphicon-plus"> </span> New Row
 </button>
+
+
+<button type="button" class="btn btn-success" onclick="location.href=/download_to_excel/"> 
+	<span class="glyphicon glyphicon-list-alt"> </span> Export to Excel </button>
+
 </div>
-</div>
+<br />
+
 
 </body>
 </html>
